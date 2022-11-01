@@ -1,4 +1,4 @@
 "# projet-C-" 
 "# RADIO" 
-//to do liste :les deux opcition avoncer   
-//crud finished
+//to do liste :op advance _login _mail   
+//done   crud finished
