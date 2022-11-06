@@ -146,3 +146,66 @@ bool invite::modifier(int CIN)
 
 
 }
+QSqlQueryModel * invite::tri_cin()
+{QSqlQueryModel * model= new QSqlQueryModel();
+
+model->setQuery("select * from invite order by CIN");
+model->setHeaderData(0, Qt::Horizontal, QObject::tr("NOM"));
+model->setHeaderData(1, Qt::Horizontal, QObject::tr("PRENOM"));
+model->setHeaderData(2, Qt::Horizontal, QObject::tr("CIN"));
+model->setHeaderData(3, Qt::Horizontal, QObject::tr("AGE"));
+model->setHeaderData(4, Qt::Horizontal, QObject::tr("NUM_TEL"));
+
+    return model;
+}
+
+
+QSqlQueryModel * invite::tri_nom()
+{QSqlQueryModel * model= new QSqlQueryModel();
+
+model->setQuery("select * from invite order by NOM");
+model->setHeaderData(0, Qt::Horizontal, QObject::tr("NOM"));
+model->setHeaderData(1, Qt::Horizontal, QObject::tr("PRENOM"));
+model->setHeaderData(2, Qt::Horizontal, QObject::tr("CIN"));
+model->setHeaderData(3, Qt::Horizontal, QObject::tr("AGE"));
+model->setHeaderData(4, Qt::Horizontal, QObject::tr("NUM_TEL"));
+
+    return model;
+}
+
+
+
+
+QSqlQueryModel * invite::tri_age()
+{QSqlQueryModel * model= new QSqlQueryModel();
+
+model->setQuery("select * from invite order by AGE");
+model->setHeaderData(0, Qt::Horizontal, QObject::tr("NOM"));
+model->setHeaderData(1, Qt::Horizontal, QObject::tr("PRENOM"));
+model->setHeaderData(2, Qt::Horizontal, QObject::tr("CIN"));
+model->setHeaderData(3, Qt::Horizontal, QObject::tr("AGE"));
+model->setHeaderData(4, Qt::Horizontal, QObject::tr("NUM_TEL"));
+
+    return model;
+}
+void invite::chercheID(QTableView *table, int CIN)
+{
+   QSqlQueryModel *model=new QSqlQueryModel();
+   QSqlQuery *query =new QSqlQuery;
+   query->prepare("select * from invite where regexp_like(CIN,:CIN);");
+   query->bindValue(":CIN",CIN);
+   if(CIN==0)
+   {
+       query->prepare("select * from invite;");
+   }
+   query->exec();
+   model->setQuery(*query);
+   table->setModel(model);
+   table->show();
+}
+void invite::clearTable(QTableView *table)
+{
+    QSqlQueryModel *model=new QSqlQueryModel();
+    model->clear();
+    table->setModel(model);
+}

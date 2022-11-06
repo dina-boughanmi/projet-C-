@@ -10,6 +10,7 @@
 #include <QDateTime>
 #include <QFile>
 #include <QMessageBox>
+#include <QTableView>
 
 class invite
 {
@@ -37,9 +38,11 @@ public:
         bool supprimer(int);
         QSqlQueryModel* afficher();
         bool modifier(int);
-
-
-
+    QSqlQueryModel* tri_cin();
+    QSqlQueryModel* tri_age();
+    QSqlQueryModel* tri_nom();
+     void chercheID(QTableView *table, int CIN);
+void clearTable(QTableView * table);
     private:
 
         QString NOM;
