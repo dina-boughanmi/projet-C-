@@ -106,7 +106,7 @@ void MainWindow::on_chercher_clicked()
 
  qDebug() << "fffffffffffffffffffff";
        int ID=ui->l_id->text().toInt();
-        QString nom=ui->l_nom->text();
+       // QString nom=ui->l_nom->text();
          bool test=A.chercher(ID);
 
         qDebug() << test;
