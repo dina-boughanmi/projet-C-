@@ -511,6 +511,30 @@ font: 10pt &quot;MS Shell Dlg 2&quot;;</string>
          <string>CIN</string>
         </property>
        </widget>
+       <widget class="QPushButton" name="pushButton_18">
+        <property name="geometry">
+         <rect>
+          <x>430</x>
+          <y>190</y>
+          <width>111</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+	color: rgb(255, 255, 255);
+background-color:rgba(100, 255, 255,100);
+border-radius: 15px;
+border: 1px solid rgba(138, 93, 166,200);
+}
+QPushButton:hover {
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(138, 93, 166,200), stop:1rgba(138, 93, 166,200));
+}</string>
+        </property>
+        <property name="text">
+         <string>Statistiques</string>
+        </property>
+       </widget>
       </widget>
       <widget class="QWidget" name="tab_3">
        <attribute name="title">

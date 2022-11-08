@@ -11,6 +11,7 @@
 #include<QTextDocument>
 #include<QPdfWriter>
 #include<QPainter>
+#include "dialog_stats.h"
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
@@ -199,4 +200,11 @@ void MainWindow::on_pushButton_17_clicked()
             int CIN=ui->lineEdit_7->text().toInt();
             i.chercheID(ui->tableView,CIN);
 
+}
+
+void MainWindow::on_pushButton_18_clicked()
+{
+    Dialog_stats stats;
+    stats.setModal(true);
+    stats.exec();
 }

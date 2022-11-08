@@ -3,8 +3,7 @@
 # Project created by QtCreator 2018-10-26T21:45:23
 #
 #-------------------------------------------------
-QT       += core gui sql
-
+QT       += core gui sql printsupport
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 TARGET = projet2A
 CONFIG += c++11
@@ -22,6 +21,7 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     connection.cpp \
+    dialog_stats.cpp \
     invite.cpp \
     main.cpp \
     mainwindow.cpp \
@@ -29,11 +29,13 @@ SOURCES += \
 
 HEADERS += \
     connection.h \
+    dialog_stats.h \
     invite.h \
     mainwindow.h \
     qcustomplot.h
 
 FORMS += \
+    dialog_stats.ui \
     mainwindow.ui
 
 # Default rules for deployment.
