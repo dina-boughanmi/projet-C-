@@ -22,6 +22,7 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
     connection.cpp \
     dialog_stats.cpp \
+    exportexcelobject.cpp \
     invite.cpp \
     main.cpp \
     mainwindow.cpp \
@@ -30,6 +31,7 @@ SOURCES += \
 HEADERS += \
     connection.h \
     dialog_stats.h \
+    exportexcelobject.h \
     invite.h \
     mainwindow.h \
     qcustomplot.h
