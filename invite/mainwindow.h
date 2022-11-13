@@ -36,6 +36,8 @@ private slots:
 
     void on_pushButton_19_clicked();
 
+    void on_pushbutton_supp_2_clicked();
+
 private:
     Ui::MainWindow *ui;
     invite etmp;

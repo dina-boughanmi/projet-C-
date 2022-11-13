@@ -69,7 +69,7 @@ margin-bottom:-1px;
 </string>
       </property>
       <property name="currentIndex">
-       <number>1</number>
+       <number>4</number>
       </property>
       <widget class="QWidget" name="tab">
        <attribute name="title">
@@ -916,6 +916,55 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgb
         </property>
         <property name="text">
          <string>supprime</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tab_5">
+       <attribute name="title">
+        <string>chat box</string>
+       </attribute>
+       <widget class="QPushButton" name="pushbutton_supp_2">
+        <property name="geometry">
+         <rect>
+          <x>390</x>
+          <y>270</y>
+          <width>75</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+	color: rgb(255, 255, 255);
+background-color:rgba(100, 255, 255,100);
+border-radius: 15px;
+border: 1px solid rgba(138, 93, 166,200);
+}
+QPushButton:hover {
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(138, 93, 166,200), stop:1rgba(138, 93, 166,200));
+}</string>
+        </property>
+        <property name="text">
+         <string>send</string>
+        </property>
+       </widget>
+       <widget class="QListView" name="listView">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>10</y>
+          <width>451</width>
+          <height>251</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEdit_12">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>270</y>
+          <width>341</width>
+          <height>20</height>
+         </rect>
         </property>
        </widget>
       </widget>

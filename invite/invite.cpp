@@ -13,6 +13,7 @@ invite::invite()
       PRENOM=" ";
       AGE=0;
       NUM_TEL=0;
+      CHAT="";
 }
 invite::invite( QString NOM, QString PRENOM ,int CIN,int AGE , int NUM_TEL)
 {
@@ -22,6 +23,12 @@ invite::invite( QString NOM, QString PRENOM ,int CIN,int AGE , int NUM_TEL)
     this->CIN=CIN;
     this->AGE=AGE;
     this->NUM_TEL=NUM_TEL;
+}
+invite::invite( QString CHAT)
+{
+
+    this->CHAT=CHAT;
+
 }
 int invite::getcin()
 {
@@ -34,6 +41,10 @@ QString invite::getnom()
 QString invite::getprenom()
 {
     return PRENOM;
+}
+QString invite::getchat()
+{
+    return CHAT;
 }
 int invite::getage()
 {
@@ -59,6 +70,11 @@ void invite::setnom(QString NOM)
 void invite::setprenom(QString PRENOM)
 {
     this->PRENOM=PRENOM;
+
+}
+void invite::setchat(QString CHAT)
+{
+    this->CHAT=CHAT;
 
 }
 void invite::setage(int AGE)
@@ -208,4 +224,39 @@ void invite::clearTable(QTableView *table)
     QSqlQueryModel *model=new QSqlQueryModel();
     model->clear();
     table->setModel(model);
+}
+
+bool invite::chatbox()
+{
+
+
+    QSqlQuery query;
+
+         query.prepare("INSERT INTO chatbox(CHAT)" "VALUES (:CHAT)");
+         query.bindValue(":CHAT", CHAT);
+
+
+
+
+               return query.exec();
+
+
+}
+QSqlQueryModel *invite::afficherc()
+{
+    QSqlQueryModel *model=new QSqlQueryModel();
+
+          model->setQuery("SELECT* FROM chatbox");
+          model->setHeaderData(0, Qt::Horizontal, QObject::tr("CHAT"));
+           return  model;
+}
+bool invite::supprimerc()
+{
+    QSqlQuery query;
+
+         query.prepare("DELETE FROM chat");
+
+
+return query.exec();
+
 }

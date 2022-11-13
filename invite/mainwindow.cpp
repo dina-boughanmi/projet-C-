@@ -13,6 +13,8 @@
 #include<QPainter>
 #include "dialog_stats.h"
 #include "exportexcelobject.h"
+
+#include<QDialog>
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
@@ -27,11 +29,20 @@ MainWindow::MainWindow(QWidget *parent)
     ui->lineEdit_10->setInputMask("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
     ui->lineEdit_6->setInputMask("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
      ui->tableView->setModel(etmp.afficher());
+     ui->listView->setModel(etmp.afficherc());
 }
 
 MainWindow::~MainWindow()
 {
     delete ui;
+    bool test=etmp.supprimerc();
+    if(test)
+    {ui->listView->setModel(etmp.afficherc());
+
+
+
+
+    }
 }
 
 
@@ -132,25 +143,30 @@ void MainWindow::on_pushButton_16_clicked()
                  painter.setPen(Qt::blue);
                  painter.setFont(QFont("Arial", 50));
                  painter.drawRect(2700,200,6300,2600);
-                 painter.drawRect(0,3000,9600,500);
                  painter.setPen(Qt::black);
-                 painter.setFont(QFont("Arial", 9));
-                 painter.drawText(300,3300,"NOM");
-                 painter.drawText(2300,3300,"PRENOM");
-                 painter.drawText(4300,3300,"CIN");
-                 painter.drawText(6000,3300,"age");
-                 painter.drawText(8300,3300,"NUM_TEL");
+
+
                  QSqlQuery query;
                  query.prepare("select * from invite");
                  query.exec();
                  while (query.next())
+
                  {
-                     painter.drawText(300,i,query.value(0).toString());
-                     painter.drawText(2300,i,query.value(1).toString());
-                     painter.drawText(4300,i,query.value(2).toString());
-                     painter.drawText(6300,i,query.value(3).toString());
-                     painter.drawText(8000,i,query.value(4).toString());
-                     i = i +500;
+                     painter.setPen(Qt::red);
+                     painter.setPen(Qt::black);
+                     painter.setFont(QFont("Arial", 9));
+                     painter.drawRect(0,1000+i,3000,2000);
+                     painter.drawText(0,1300+i,"NOM");
+                     painter.drawText(0,1600+i,"PRENOM");
+                     painter.drawText(0,1900+i,"CIN");
+                     painter.drawText(0,2200+i,"age");
+                     painter.drawText(0,2500+i,"NUM_TEL");
+                     painter.drawText(1000,1300+i,query.value(0).toString());
+                     painter.drawText(1000,1600+i,query.value(1).toString());
+                     painter.drawText(1000,1900+i,query.value(2).toString());
+                     painter.drawText(1000,2200+i,query.value(3).toString());
+                     painter.drawText(1000,2500+i,query.value(4).toString());
+                     i = i +3000;
                  }
 
                  int reponse = QMessageBox::question(this, "PDF généré", "Afficher le PDF ?", QMessageBox::Yes |  QMessageBox::No);
@@ -235,4 +251,21 @@ void MainWindow::on_pushButton_19_clicked()
                                  QString(tr("%1 records exported!")).arg(retVal)
                                  );
     }
+}
+
+void MainWindow::on_pushbutton_supp_2_clicked()
+{QString CHAT=ui->lineEdit_12->text();
+    invite i(CHAT);
+ bool test=i.chatbox();
+ if (test)
+ { ui->listView->setModel(etmp.afficherc());
+ QMessageBox::information(nullptr,QObject::tr("ok"),QObject::tr("send effectue\n ""click cancel"),QMessageBox::Cancel);
+
+ }
+ else
+ {QMessageBox::critical(nullptr,QObject::tr("not ok"),QObject::tr("erreur \n""click to cancel"),QMessageBox::Cancel);}
+
+
+
+
 }
