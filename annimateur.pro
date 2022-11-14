@@ -1,6 +1,6 @@
 CONFIG += console c++11
 QT       += core gui sql
-
+QT += printsupport
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 
@@ -21,15 +21,20 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
     animateur.cpp \
     connexion.cpp \
+    dialog_stats.cpp \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    qcustomplot.cpp
 
 HEADERS += \
     animateur.h \
     connexion.h \
-    mainwindow.h
+    dialog_stats.h \
+    mainwindow.h \
+    qcustomplot.h
 
 FORMS += \
+    dialog_stats.ui \
     mainwindow.ui
 
 # Default rules for deployment.

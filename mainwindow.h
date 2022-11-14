@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include <QSqlDatabase>
 #include "animateur.h"
+#include "statistique_c.h"
 
 
 QT_BEGIN_NAMESPACE
@@ -22,19 +23,26 @@ private slots:
 
 
      void on_supprimer_clicked();
-
      void on_modifier_clicked();
+     void  on_ajouter_clicked();
+
+     void on_tri_clicked();
 
 
 
-    void  on_ajouter_clicked();
+     void on_pdf_clicked();
 
-   // void on_tri_clicked();
+     void on_chercher_clicked();
 
-    void on_chercher_clicked();
+     void on_statistique_clicked();
+
+     void on_planning_clicked();
+
+     void on_details_clicked();
 
 private:
     Ui::MainWindow *ui;
+     statistique_c * statistique_c;
     Animateur A;
 };
 #endif // MAINWINDOW_H
