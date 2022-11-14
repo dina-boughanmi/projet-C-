@@ -30,6 +30,10 @@ SOURCES += \
     invite.cpp \
     main.cpp \
     mainwindow.cpp \
+    messengerclient.cpp \
+    messengerconnection.cpp \
+    messengerserver.cpp \
+    messengersocket.cpp \
     qcustomplot.cpp
 
 HEADERS += \
@@ -38,11 +42,17 @@ HEADERS += \
     exportexcelobject.h \
     invite.h \
     mainwindow.h \
+    messengerclient.h \
+    messengerconnection.h \
+    messengerserver.h \
+    messengersocket.h \
     qcustomplot.h
 
 FORMS += \
     dialog_stats.ui \
-    mainwindow.ui
+    mainwindow.ui \
+    messengerclient.ui \
+    messengerconnection.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

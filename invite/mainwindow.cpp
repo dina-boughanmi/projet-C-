@@ -13,7 +13,7 @@
 #include<QPainter>
 #include "dialog_stats.h"
 #include "exportexcelobject.h"
-
+#include "messengerclient.h"
 #include<QDialog>
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -29,20 +29,12 @@ MainWindow::MainWindow(QWidget *parent)
     ui->lineEdit_10->setInputMask("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
     ui->lineEdit_6->setInputMask("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
      ui->tableView->setModel(etmp.afficher());
-     ui->listView->setModel(etmp.afficherc());
+     //ui->listView->setModel(etmp.afficherc());
 }
 
 MainWindow::~MainWindow()
 {
     delete ui;
-    bool test=etmp.supprimerc();
-    if(test)
-    {ui->listView->setModel(etmp.afficherc());
-
-
-
-
-    }
 }
 
 
@@ -253,7 +245,7 @@ void MainWindow::on_pushButton_19_clicked()
     }
 }
 
-void MainWindow::on_pushbutton_supp_2_clicked()
+/*void MainWindow::on_pushbutton_supp_2_clicked()
 {QString CHAT=ui->lineEdit_12->text();
     invite i(CHAT);
  bool test=i.chatbox();
@@ -268,4 +260,10 @@ void MainWindow::on_pushbutton_supp_2_clicked()
 
 
 
+}
+*/
+void MainWindow::on_pushButton_20_clicked()
+{
+    MessengerClient MS;
+    MS.exec();
 }

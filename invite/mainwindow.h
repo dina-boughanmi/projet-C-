@@ -38,6 +38,8 @@ private slots:
 
     void on_pushbutton_supp_2_clicked();
 
+    void on_pushButton_20_clicked();
+
 private:
     Ui::MainWindow *ui;
     invite etmp;
