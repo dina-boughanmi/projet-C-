@@ -1,4 +1,5 @@
 "# projet-C-" 
 "# RADIO" 
-//to do liste :op advance _login _mail   
-//done   crud finished
+//done:op advance _login _mail   
+//done :  crud finished
+//to do :ardouino
