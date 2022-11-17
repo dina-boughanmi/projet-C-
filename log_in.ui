@@ -1,0 +1,1091 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>log_in</class>
+ <widget class="QMainWindow" name="log_in">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>651</width>
+    <height>596</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>651</width>
+    <height>596</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>651</width>
+    <height>596</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>On_Air</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="imag.qrc">
+    <normaloff>:/Pictures/on air.jpg</normaloff>:/Pictures/on air.jpg</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QGroupBox" name="groupBox">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>170</y>
+      <width>303</width>
+      <height>297</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QWidget {
+    background-color: rgb(225, 225, 225);
+    color: rgb(225, 225, 225);
+}
+/* ---------------------------------------------------------------------------------------------------- */
+
+
+/* QGroupBox */
+/* ---------------------------------------------------------------------------------------------------- */
+QGroupBox {
+    border: 2px solid;
+    border-radius: 5px;
+
+    margin-top: 20px;
+    margin-bottom: 10px;
+
+    border-color: rgb(80, 80, 200);
+}
+
+QGroupBox::title {
+    subcontrol-origin: margin;
+    subcontrol-position: top left;
+    padding-left: 3px;
+}
+/* ---------------------------------------------------------------------------------------------------- */
+
+QFrame#horizontalLineMiddleSeparator {
+    background-color: rgb(80, 80, 200 );
+}
+
+/* Process Scanner QFrame horizontal lines  */
+/* ---------------------------------------------------------------------------------------------------- */
+QFrame#lineScanner {
+    background-color: rgb(80, 80, 200);
+}
+
+QFrame#lineScanFilters {
+    background-color: rgb(80, 80, 200);
+}
+/* ---------------------------------------------------------------------------------------------------- */
+
+
+/* QSpinBox  */
+/* ---------------------------------------------------------------------------------------------------- */
+QSpinBox {
+    border: 1px solid rgb(80, 80, 200);
+}
+
+QSpinBox::up-arrow {
+    image: url(:/icons/up-arrow.png);
+}
+
+QSpinBox::down-arrow {
+    image: url(:/icons/down-arrow.png);
+}
+
+QSpinBox::text {
+    background-color: rgb(80, 80, 200);
+}
+/* ---------------------------------------------------------------------------------------------------- */
+
+
+
+
+/* QSlider horizontal/vertical  */
+/* ---------------------------------------------------------------------------------------------------- */
+QSlider:horizontal,
+QSlider:vertical {
+    background-color: rgb(40, 40, 100);
+    height: 18px;
+}
+
+QSlider::groove:horizontal {
+    height: 18px;
+    background-color: transparent;
+}
+
+QSlider::handle:horizontal {
+    background-color: rgb(80, 80, 200);
+    width: 10px;
+    height: 18px;
+}
+
+QSlider::handle:horizontal:hover,
+QSlider::handle:vertical:hover {
+    background-color: rgb(150, 150, 250);
+}
+/* ---------------------------------------------------------------------------------------------------- */
+
+
+
+
+/* QLineEdit &amp; QTextEdit */
+/* ---------------------------------------------------------------------------------------------------- */
+QLineEdit,
+QTextEdit {
+    border: 1px solid;
+    border-radius: 2px;
+    border-color: rgb(80, 80, 200);
+    min-height: 25px;
+    padding-left: 5px;
+}
+
+QLineEdit[text=&quot;&quot;] {
+    color: rgb(100, 100, 150);
+}
+
+QLineEdit::disabled {
+    color: rgb(100, 100, 150);
+    border-color: rgb(50, 50, 100);
+}
+/* ---------------------------------------------------------------------------------------------------- */
+
+
+
+
+/* QMenu */
+/* ---------------------------------------------------------------------------------------------------- */
+QMenu {
+    border: 1px solid;
+    border-radius: 2px;
+    border-color: rgb(80, 80, 200);
+
+}
+
+QMenu::item {
+    color: rgb(150, 150, 250);
+    border: 1px solid;
+    border-color: rgb(80, 80, 200);
+
+    padding: 5px;
+
+    outline: 0;
+}
+
+QMenu::item:selected {
+    background-color: rgb(40, 40, 200);
+}
+
+QMenu::indicator {
+    margin-left: 4px;
+}
+
+QMenu::indicator:checked {
+    border: 2px solid;
+    border-radius: 2px;
+
+    border-color:   rgb(80, 80, 200);
+    background-color: rgb(80, 80, 200);
+
+}
+
+QMenu::indicator:unchecked {
+    border: 2px solid;
+    border-radius: 2px;
+
+    border-color:   rgb(80, 80, 200);
+    color: rgb(100, 100, 150);
+}
+/* ---------------------------------------------------------------------------------------------------- */
+
+
+
+
+/* QHeaderView */
+/* ---------------------------------------------------------------------------------------------------- */
+QHeaderView::section:horizontal,
+QHeaderView::section:vertical
+{
+    background-color: rgb(30, 30, 100);
+}
+/* ---------------------------------------------------------------------------------------------------- */
+
+
+
+
+/* QScrollBar  */
+/* ---------------------------------------------------------------------------------------------------- */
+QScrollBar:vertical,
+QScrollBar:horizontal {
+
+    border-color: rgb(90, 90, 255);
+}
+
+QScrollBar::handle:vertical,
+QScrollBar::handle:horizontal {
+    background-color: rgb(40, 40, 150);
+}
+
+QScrollBar::handle:hover:vertical,
+QScrollBar::handle:hover:horizontal {
+    background-color: rgb(40, 40, 200);
+}
+
+QScrollBar::up-arrow:horizontal,
+QScrollBar::down-arrow:horizontal,
+QScrollBar::sub-line:vertical,
+QScrollBar::add-line:vertical {
+    background-color: rgb(20, 20, 30);
+    color: rgb(20, 20, 30);
+}
+
+QScrollBar::up-arrow:vertical,
+QScrollBar::down-arrow:vertical,
+QScrollBar::up-arrow:horizontal,
+QScrollBar::down-arrow:horizontal {
+    background-color: rgb(20, 20, 30);
+    border-color: rgb(20, 20, 30);
+    color: rgb(20, 20, 30);
+}
+
+QScrollBar::add-page:horizontal,
+QScrollBar::sub-page:horizontal,
+QScrollBar::add-page:vertical,
+QScrollBar::sub-page:vertical {
+    background-color: rgb(20, 20, 30);
+}
+/* ---------------------------------------------------------------------------------------------------- */
+
+
+
+
+
+/* Tree/List/Table Views  */
+/* ---------------------------------------------------------------------------------------------------- */
+QTreeView,
+QListView,
+QListView {
+    border: 2px solid;
+    border-color: rgb(80, 80, 200);
+    border-radius: 5px;
+    outline: 0;
+}
+
+QTreeView::item,
+QListView::item,
+QTableView::item {
+    background-color: rgb(20, 20, 90);
+    outline: 0;
+}
+
+QTreeView::item:alternate,
+QListView::item:alternate,
+QTableView::item:alternate {
+    background-color: rgb(30, 30, 110);
+    outline: 0;
+}
+
+QTreeView::item:hover,
+QTreeView::item:alternate:hover,
+QListView::item:hover,
+QListView::item:alternate:hover,
+QTableView::item:hover,
+QTableView::item:alternate:hover {
+    background-color: rgb(30, 30, 150);
+}
+
+QListView::item:selected,
+QTreeView::item:selected,
+QTableView::item:selected,
+QTreeView::item:alternate:selected,
+QListVew::item:alternate:selected,
+QTableView::item:alternate:selected {
+    background-color: rgb(40, 40, 200);
+    color: rgb(150, 150, 250);
+    outline: 0;
+}
+
+QTreeView:branch {
+    background-color: rgb(20, 20, 90);
+}
+
+QTreeView:branch:has-siblings:adjoins-item {
+  border-image: url(&quot;:/icons/branch-child-guide.png&quot;) 0;
+}
+
+QTreeView:branch:!has-children:!has-siblings:adjoins-item {
+    border-image: url(&quot;:/icons/branch-end-guide.png&quot;) 0;
+}
+
+QTreeView:branch:has-children:!has-siblings:closed,
+QTreeView:branch:closed:has-children:has-siblings {
+  border-image: none;
+  image: url(:/icons/branch-closed.png);
+}
+
+QTreeView:branch:open:has-children:!has-siblings,
+QTreeView:branch:open:has-children:has-siblings {
+    border-image: none;
+    image: url(://icons/branch-open.png);
+}
+/* ---------------------------------------------------------------------------------------------------- */
+
+/* QComboBox  */
+/* ---------------------------------------------------------------------------------------------------- */
+QComboBox {
+    border: 1px solid;
+    border-color: rgb(80, 80, 200);
+    min-height: 25px;
+    padding-left: 5px;
+    border-radius: 2px;
+}
+
+QComboBox::hover {
+    background-color: rgb(40, 40, 200);
+}
+
+QComboBox:disabled {
+
+    color: rgb(100, 100, 150);
+    border-color: rgb(50, 50, 100);
+}
+
+QComboBox QAbstractItemView {
+    border: 0px solid;
+    border-radius: 2px;
+    border-color: rgb(80, 80, 200);
+}
+
+QComboBox QAbstractItemView::item {
+    color: rgb(150, 150, 250);
+
+    border: 1px solid;
+    border-color: rgb(80, 80, 200);
+
+
+    padding-top: 3px;
+    padding-bottom: 3px;
+
+    outline: 0;
+}
+
+
+QComboBox QAbstractItemView::indicator:checked {
+    border: 2px solid;
+    border-radius: 2px;
+
+    border-color:   rgb(80, 80, 200);
+    background-color: rgb(80, 80, 200);
+}
+
+
+QComboBox QAbstractItemView::indicator:unchecked {
+    border: 2px solid;
+    border-radius: 2px;
+
+    border-color:   rgb(80, 80, 200);
+    color: rgb(100, 100, 150);
+}
+
+QComboBox QAbstractItemView::item:hover {
+    background-color: rgb(40, 40, 200);
+    color: rgb(150, 150, 250);
+    outline: 0;
+}
+
+QComboBox QAbstractItemView::focus {
+    border-color: rgb(150, 130, 250);
+    outline: 0;
+}
+
+QComboBox::down-arrow {
+    image: url(:/icons/down-arrow.png);
+}
+/* ---------------------------------------------------------------------------------------------------- */
+
+
+
+
+/* QCheckBox  */
+/* ---------------------------------------------------------------------------------------------------- */
+QCheckBox::indicator:checked {
+    border: 2px solid;
+    border-radius: 2px;
+
+    border-color:   rgb(80, 80, 200);
+    background-color: rgb(80, 80, 200);
+}
+
+
+QCheckBox::indicator:unchecked {
+    border: 2px solid;
+    border-radius: 2px;
+
+    border-color:   rgb(80, 80, 200);
+    color: rgb(100, 100, 150);
+}
+/* ---------------------------------------------------------------------------------------------------- */
+
+
+
+
+/* QPushButton */
+/* ---------------------------------------------------------------------------------------------------- */
+QPushButton {
+    border: 1px solid;
+    border-radius: 3px;
+    background-color: rgb(30, 30, 100);
+    border-color: rgb(80, 80, 200);
+    min-height: 25px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+QPushButton::hover {
+    background-color: rgb(40, 40, 200);
+}
+
+QPushButton::pressed {
+    background-color: rgb(50, 50, 220);
+}
+
+QPushButton::disabled {
+    background-color: rgb(20, 20, 50);
+    color: rgb(100, 100, 150);
+    border-color: rgb(50, 50, 100);
+}
+
+QPushButton::focus {
+    border-color: rgb(130, 130, 200);
+    outline: 0;
+}</string>
+    </property>
+    <property name="title">
+     <string>                       welcome</string>
+    </property>
+    <widget class="QWidget" name="layoutWidget">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>30</y>
+       <width>243</width>
+       <height>237</height>
+      </rect>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <spacer name="verticalSpacer">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>40</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <item>
+         <spacer name="horizontalSpacer_3">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="lineEdit_loginusername">
+          <property name="placeholderText">
+           <string>user name</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer_4">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <spacer name="verticalSpacer_2">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>40</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <item>
+         <spacer name="horizontalSpacer">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="lineEdit_loginpwd">
+          <property name="echoMode">
+           <enum>QLineEdit::Password</enum>
+          </property>
+          <property name="placeholderText">
+           <string>password</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer_2">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <spacer name="verticalSpacer_3">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>40</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton">
+        <property name="text">
+         <string>ok</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="pushButton_2">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>480</y>
+      <width>170</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QWidget {
+    background-color: rgb(225, 225, 225);
+    color: rgb(225, 225, 225);
+}
+/* ---------------------------------------------------------------------------------------------------- */
+
+
+/* QGroupBox */
+/* ---------------------------------------------------------------------------------------------------- */
+QGroupBox {
+    border: 2px solid;
+    border-radius: 5px;
+
+    margin-top: 20px;
+    margin-bottom: 10px;
+
+    border-color: rgb(80, 80, 200);
+}
+
+QGroupBox::title {
+    subcontrol-origin: margin;
+    subcontrol-position: top left;
+    padding-left: 3px;
+}
+/* ---------------------------------------------------------------------------------------------------- */
+
+QFrame#horizontalLineMiddleSeparator {
+    background-color: rgb(80, 80, 200 );
+}
+
+/* Process Scanner QFrame horizontal lines  */
+/* ---------------------------------------------------------------------------------------------------- */
+QFrame#lineScanner {
+    background-color: rgb(80, 80, 200);
+}
+
+QFrame#lineScanFilters {
+    background-color: rgb(80, 80, 200);
+}
+/* ---------------------------------------------------------------------------------------------------- */
+
+
+/* QSpinBox  */
+/* ---------------------------------------------------------------------------------------------------- */
+QSpinBox {
+    border: 1px solid rgb(80, 80, 200);
+}
+
+QSpinBox::up-arrow {
+    image: url(:/icons/up-arrow.png);
+}
+
+QSpinBox::down-arrow {
+    image: url(:/icons/down-arrow.png);
+}
+
+QSpinBox::text {
+    background-color: rgb(80, 80, 200);
+}
+/* ---------------------------------------------------------------------------------------------------- */
+
+
+
+
+/* QSlider horizontal/vertical  */
+/* ---------------------------------------------------------------------------------------------------- */
+QSlider:horizontal,
+QSlider:vertical {
+    background-color: rgb(40, 40, 100);
+    height: 18px;
+}
+
+QSlider::groove:horizontal {
+    height: 18px;
+    background-color: transparent;
+}
+
+QSlider::handle:horizontal {
+    background-color: rgb(80, 80, 200);
+    width: 10px;
+    height: 18px;
+}
+
+QSlider::handle:horizontal:hover,
+QSlider::handle:vertical:hover {
+    background-color: rgb(150, 150, 250);
+}
+/* ---------------------------------------------------------------------------------------------------- */
+
+
+
+
+/* QLineEdit &amp; QTextEdit */
+/* ---------------------------------------------------------------------------------------------------- */
+QLineEdit,
+QTextEdit {
+    border: 1px solid;
+    border-radius: 2px;
+    border-color: rgb(80, 80, 200);
+    min-height: 25px;
+    padding-left: 5px;
+}
+
+QLineEdit[text=&quot;&quot;] {
+    color: rgb(100, 100, 150);
+}
+
+QLineEdit::disabled {
+    color: rgb(100, 100, 150);
+    border-color: rgb(50, 50, 100);
+}
+/* ---------------------------------------------------------------------------------------------------- */
+
+
+
+
+/* QMenu */
+/* ---------------------------------------------------------------------------------------------------- */
+QMenu {
+    border: 1px solid;
+    border-radius: 2px;
+    border-color: rgb(80, 80, 200);
+
+}
+
+QMenu::item {
+    color: rgb(150, 150, 250);
+    border: 1px solid;
+    border-color: rgb(80, 80, 200);
+
+    padding: 5px;
+
+    outline: 0;
+}
+
+QMenu::item:selected {
+    background-color: rgb(40, 40, 200);
+}
+
+QMenu::indicator {
+    margin-left: 4px;
+}
+
+QMenu::indicator:checked {
+    border: 2px solid;
+    border-radius: 2px;
+
+    border-color:   rgb(80, 80, 200);
+    background-color: rgb(80, 80, 200);
+
+}
+
+QMenu::indicator:unchecked {
+    border: 2px solid;
+    border-radius: 2px;
+
+    border-color:   rgb(80, 80, 200);
+    color: rgb(100, 100, 150);
+}
+/* ---------------------------------------------------------------------------------------------------- */
+
+
+
+
+/* QHeaderView */
+/* ---------------------------------------------------------------------------------------------------- */
+QHeaderView::section:horizontal,
+QHeaderView::section:vertical
+{
+    background-color: rgb(30, 30, 100);
+}
+/* ---------------------------------------------------------------------------------------------------- */
+
+
+
+
+/* QScrollBar  */
+/* ---------------------------------------------------------------------------------------------------- */
+QScrollBar:vertical,
+QScrollBar:horizontal {
+
+    border-color: rgb(90, 90, 255);
+}
+
+QScrollBar::handle:vertical,
+QScrollBar::handle:horizontal {
+    background-color: rgb(40, 40, 150);
+}
+
+QScrollBar::handle:hover:vertical,
+QScrollBar::handle:hover:horizontal {
+    background-color: rgb(40, 40, 200);
+}
+
+QScrollBar::up-arrow:horizontal,
+QScrollBar::down-arrow:horizontal,
+QScrollBar::sub-line:vertical,
+QScrollBar::add-line:vertical {
+    background-color: rgb(20, 20, 30);
+    color: rgb(20, 20, 30);
+}
+
+QScrollBar::up-arrow:vertical,
+QScrollBar::down-arrow:vertical,
+QScrollBar::up-arrow:horizontal,
+QScrollBar::down-arrow:horizontal {
+    background-color: rgb(20, 20, 30);
+    border-color: rgb(20, 20, 30);
+    color: rgb(20, 20, 30);
+}
+
+QScrollBar::add-page:horizontal,
+QScrollBar::sub-page:horizontal,
+QScrollBar::add-page:vertical,
+QScrollBar::sub-page:vertical {
+    background-color: rgb(20, 20, 30);
+}
+/* ---------------------------------------------------------------------------------------------------- */
+
+
+
+
+
+/* Tree/List/Table Views  */
+/* ---------------------------------------------------------------------------------------------------- */
+QTreeView,
+QListView,
+QListView {
+    border: 2px solid;
+    border-color: rgb(80, 80, 200);
+    border-radius: 5px;
+    outline: 0;
+}
+
+QTreeView::item,
+QListView::item,
+QTableView::item {
+    background-color: rgb(20, 20, 90);
+    outline: 0;
+}
+
+QTreeView::item:alternate,
+QListView::item:alternate,
+QTableView::item:alternate {
+    background-color: rgb(30, 30, 110);
+    outline: 0;
+}
+
+QTreeView::item:hover,
+QTreeView::item:alternate:hover,
+QListView::item:hover,
+QListView::item:alternate:hover,
+QTableView::item:hover,
+QTableView::item:alternate:hover {
+    background-color: rgb(30, 30, 150);
+}
+
+QListView::item:selected,
+QTreeView::item:selected,
+QTableView::item:selected,
+QTreeView::item:alternate:selected,
+QListVew::item:alternate:selected,
+QTableView::item:alternate:selected {
+    background-color: rgb(40, 40, 200);
+    color: rgb(150, 150, 250);
+    outline: 0;
+}
+
+QTreeView:branch {
+    background-color: rgb(20, 20, 90);
+}
+
+QTreeView:branch:has-siblings:adjoins-item {
+  border-image: url(&quot;:/icons/branch-child-guide.png&quot;) 0;
+}
+
+QTreeView:branch:!has-children:!has-siblings:adjoins-item {
+    border-image: url(&quot;:/icons/branch-end-guide.png&quot;) 0;
+}
+
+QTreeView:branch:has-children:!has-siblings:closed,
+QTreeView:branch:closed:has-children:has-siblings {
+  border-image: none;
+  image: url(:/icons/branch-closed.png);
+}
+
+QTreeView:branch:open:has-children:!has-siblings,
+QTreeView:branch:open:has-children:has-siblings {
+    border-image: none;
+    image: url(://icons/branch-open.png);
+}
+/* ---------------------------------------------------------------------------------------------------- */
+
+/* QComboBox  */
+/* ---------------------------------------------------------------------------------------------------- */
+QComboBox {
+    border: 1px solid;
+    border-color: rgb(80, 80, 200);
+    min-height: 25px;
+    padding-left: 5px;
+    border-radius: 2px;
+}
+
+QComboBox::hover {
+    background-color: rgb(40, 40, 200);
+}
+
+QComboBox:disabled {
+
+    color: rgb(100, 100, 150);
+    border-color: rgb(50, 50, 100);
+}
+
+QComboBox QAbstractItemView {
+    border: 0px solid;
+    border-radius: 2px;
+    border-color: rgb(80, 80, 200);
+}
+
+QComboBox QAbstractItemView::item {
+    color: rgb(150, 150, 250);
+
+    border: 1px solid;
+    border-color: rgb(80, 80, 200);
+
+
+    padding-top: 3px;
+    padding-bottom: 3px;
+
+    outline: 0;
+}
+
+
+QComboBox QAbstractItemView::indicator:checked {
+    border: 2px solid;
+    border-radius: 2px;
+
+    border-color:   rgb(80, 80, 200);
+    background-color: rgb(80, 80, 200);
+}
+
+
+QComboBox QAbstractItemView::indicator:unchecked {
+    border: 2px solid;
+    border-radius: 2px;
+
+    border-color:   rgb(80, 80, 200);
+    color: rgb(100, 100, 150);
+}
+
+QComboBox QAbstractItemView::item:hover {
+    background-color: rgb(40, 40, 200);
+    color: rgb(150, 150, 250);
+    outline: 0;
+}
+
+QComboBox QAbstractItemView::focus {
+    border-color: rgb(150, 130, 250);
+    outline: 0;
+}
+
+QComboBox::down-arrow {
+    image: url(:/icons/down-arrow.png);
+}
+/* ---------------------------------------------------------------------------------------------------- */
+
+
+
+
+/* QCheckBox  */
+/* ---------------------------------------------------------------------------------------------------- */
+QCheckBox::indicator:checked {
+    border: 2px solid;
+    border-radius: 2px;
+
+    border-color:   rgb(80, 80, 200);
+    background-color: rgb(80, 80, 200);
+}
+
+
+QCheckBox::indicator:unchecked {
+    border: 2px solid;
+    border-radius: 2px;
+
+    border-color:   rgb(80, 80, 200);
+    color: rgb(100, 100, 150);
+}
+/* ---------------------------------------------------------------------------------------------------- */
+
+
+
+
+/* QPushButton */
+/* ---------------------------------------------------------------------------------------------------- */
+QPushButton {
+    border: 1px solid;
+    border-radius: 3px;
+    background-color: rgb(30, 30, 100);
+    border-color: rgb(80, 80, 200);
+    min-height: 25px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+QPushButton::hover {
+    background-color: rgb(40, 40, 200);
+}
+
+QPushButton::pressed {
+    background-color: rgb(50, 50, 220);
+}
+
+QPushButton::disabled {
+    background-color: rgb(20, 20, 50);
+    color: rgb(100, 100, 150);
+    border-color: rgb(50, 50, 100);
+}
+
+QPushButton::focus {
+    border-color: rgb(130, 130, 200);
+    outline: 0;
+}</string>
+    </property>
+    <property name="text">
+     <string>Gestion d'administration</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_gif">
+    <property name="geometry">
+     <rect>
+      <x>220</x>
+      <y>50</y>
+      <width>171</width>
+      <height>121</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="scaledContents">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_date">
+    <property name="geometry">
+     <rect>
+      <x>450</x>
+      <y>40</y>
+      <width>111</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>651</width>
+     <height>30</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources>
+  <include location="imag.qrc"/>
+ </resources>
+ <connections/>
+</ui>
