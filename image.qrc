@@ -1,0 +1,16 @@
+<RCC>
+    <qresource prefix="/">
+        <file>IMG8RES FOR QT/icons8-communication-unscreen.gif</file>
+        <file>IMG8RES FOR QT/icons8-fingerprint-scan-unscreen.gif</file>
+        <file>IMG8RES FOR QT/icons8-shield-unscreen.gif</file>
+        <file>IMG8RES FOR QT/icons8-tools-unscreen.gif</file>
+        <file>IMG8RES FOR QT/modifier.png</file>
+        <file>IMG8RES FOR QT/on air.jpg</file>
+        <file>IMG8RES FOR QT/onair.png</file>
+        <file>IMG8RES FOR QT/print.png</file>
+        <file>IMG8RES FOR QT/stat.png</file>
+        <file>IMG8RES FOR QT/stats.png</file>
+        <file>IMG8RES FOR QT/trash.png</file>
+        <file>IMG8RES FOR QT/valider.png</file>
+    </qresource>
+</RCC>

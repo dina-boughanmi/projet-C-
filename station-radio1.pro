@@ -68,9 +68,10 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 RESOURCES += \
-    imag.qrc
+    image.qrc
 
 DISTFILES += \
+    ../../Downloads/on air.jpg \
     ../../onair.png \
     SMTPClient/SMTPClient.pri \
     icons8-fingerprint-scan.gif

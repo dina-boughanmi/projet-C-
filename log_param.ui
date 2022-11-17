@@ -13,6 +13,10 @@
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
+  <property name="windowIcon">
+   <iconset resource="image.qrc">
+    <normaloff>:/IMG8RES FOR QT/on air.jpg</normaloff>:/IMG8RES FOR QT/on air.jpg</iconset>
+  </property>
   <property name="styleSheet">
    <string notr="true">QWidget {
     background-color: rgb(225, 225, 225);
@@ -646,6 +650,8 @@ QPushButton::focus {
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
- <resources/>
+ <resources>
+  <include location="image.qrc"/>
+ </resources>
  <connections/>
 </ui>
