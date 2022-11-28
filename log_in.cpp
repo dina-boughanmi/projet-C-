@@ -5,19 +5,28 @@
 #include<QWidget>
 #include <QLabel>
 #include"log_param.h"
-
+#include"Atelier_Arduino_v2/arduino.h"
 #include"mainwindow.h"
+
 log_in::log_in(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::log_in)
 {
     ui->setupUi(this);
+  //ardouino
+    int ret=A.connect_arduino(); // lancer la connexion à arduino
+    switch(ret){
+    case(0):qDebug()<< "arduino is available and connected to : "<< A.getarduino_port_name();
+        break;
+    case(1):qDebug() << "arduino is available but not connected to :" <<A.getarduino_port_name();
+       break;
+    case(-1):qDebug() << "arduino is not available";
+    }
+     QObject::connect(A.getserial(),SIGNAL(readyRead()),this,SLOT(update_label())); // permet de lancer
+     //le slot update_label suite à la reception du signal readyRead (reception des données).
 
-    //Timer
-//         QTimer *timer_p=new QTimer(ui->label_time);
-  //       connect(timer_p, SIGNAL(timeout()), ui->label_time,SLOT(showTime()));
-    //     timer_p->start(1000);
-      //   ui->label_time->setText(timer_p);
+
+
 
 
     //DAate systeme
@@ -54,8 +63,11 @@ void log_in::on_pushButton_clicked()
     QString USERNAME(ui->lineEdit_loginusername->text());
      QString PWD(ui->lineEdit_loginpwd->text());
      bool verif_recherche=rechercher_user(USERNAME,PWD);
+
    if (verif_recherche )
    {
+             A.write_to_arduino("0"); /*envoyer 0 à arduino*/
+       qDebug()<<"write  to ardouino "<<A.write_to_arduino("0");
  QMessageBox::information(this,tr("Edit"),tr("welcome to on air"));
 
  QMessageBox::information(this, QObject::tr("database is open"),
@@ -63,8 +75,22 @@ void log_in::on_pushButton_clicked()
                          "Click Cancel to exit."), QMessageBox::Cancel);
 
      w->show();
-   }else {
-QMessageBox::critical(this,tr("on Air"),tr(" Failed to log in !"));
+     //this->destroy();
+     this->hide();
+   }else
+   {   trys++;
+       int re=3-trys;
+ QString numbre =  QString::number(re);
+
+       if(trys==3){
+           qDebug() << "Hello arduino is working";
+       A.write_to_arduino("1"); /*envoyer 1 à arduino*/
+
+}
+       QString rest=re!=0?"Failed to log in ! you have  "+numbre+"  tries to rentre correctly\n or the alarme will set ON ":"YOU HAVE 10 SECONDS TO ENTER THE RIGHT PASSWORD";
+
+          QMessageBox::critical(this,tr("on Air"),rest);
+
 }
 }
 

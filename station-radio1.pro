@@ -29,6 +29,7 @@ CONFIG += c++11
 
 
 SOURCES += \
+    Atelier_Arduino_v2/arduino.cpp \
     SMTPClient/email.cpp \
     SMTPClient/emailaddress.cpp \
     SMTPClient/smtpclient.cpp \
@@ -44,6 +45,7 @@ SOURCES += \
     studio.cpp
 
 HEADERS += \
+    Atelier_Arduino_v2/arduino.h \
     SMTPClient/email.h \
     SMTPClient/emailaddress.h \
     SMTPClient/smtpclient.h \
@@ -68,10 +70,9 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 RESOURCES += \
-    image.qrc
+    imag.qrc
 
 DISTFILES += \
-    ../../Downloads/on air.jpg \
     ../../onair.png \
     SMTPClient/SMTPClient.pri \
     icons8-fingerprint-scan.gif

@@ -51,14 +51,7 @@ private slots:
 
     void on_pushButton_5_clicked();
 
-
-
     void on_pushButton_3_clicked();
-
-
-
-
-
 
     void on_pushButton_7_clicked();
 
@@ -68,8 +61,6 @@ private slots:
 
     void on_tabwidget_currentChanged(int index);
 
-
-
     void on_checkBox_3_stateChanged(int arg1);
 
     void on_checkBox_2_stateChanged(int arg2);
@@ -77,7 +68,6 @@ private slots:
     void on_checkBox_stateChanged(int arg3);
 
     void on_pushButton_clicked();
-
 
     void on_pushButton_4_clicked();
 

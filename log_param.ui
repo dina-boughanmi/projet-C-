@@ -14,8 +14,8 @@
    <string/>
   </property>
   <property name="windowIcon">
-   <iconset resource="image.qrc">
-    <normaloff>:/IMG8RES FOR QT/on air.jpg</normaloff>:/IMG8RES FOR QT/on air.jpg</iconset>
+   <iconset>
+    <normaloff>../../../IMG8RES FOR QT/on air.jpg</normaloff>../../../IMG8RES FOR QT/on air.jpg</iconset>
   </property>
   <property name="styleSheet">
    <string notr="true">QWidget {
@@ -650,8 +650,6 @@ QPushButton::focus {
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
- <resources>
-  <include location="image.qrc"/>
- </resources>
+ <resources/>
  <connections/>
 </ui>

@@ -26,8 +26,9 @@
    <string>ON AIR </string>
   </property>
   <property name="windowIcon">
-   <iconset resource="image.qrc">
-    <normaloff>:/IMG8RES FOR QT/on air.jpg</normaloff>:/IMG8RES FOR QT/on air.jpg</iconset>
+   <iconset>
+    <selectedon>:/Pictures/on air.jpg</selectedon>
+   </iconset>
   </property>
   <property name="styleSheet">
    <string notr="true">QCheckBox::indicator:checked, QRadioButton::indicator:checked
@@ -1188,8 +1189,8 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
              <string>save as pdf </string>
             </property>
             <property name="icon">
-             <iconset resource="image.qrc">
-              <normaloff>:/IMG8RES FOR QT/print.png</normaloff>:/IMG8RES FOR QT/print.png</iconset>
+             <iconset>
+              <normaloff>../../IMG8RES FOR QT/print.png</normaloff>../../IMG8RES FOR QT/print.png</iconset>
             </property>
            </widget>
           </item>
@@ -1199,8 +1200,8 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
              <string>statistique top 5</string>
             </property>
             <property name="icon">
-             <iconset resource="image.qrc">
-              <normaloff>:/IMG8RES FOR QT/stat.png</normaloff>:/IMG8RES FOR QT/stat.png</iconset>
+             <iconset>
+              <normaloff>../../IMG8RES FOR QT/stat.png</normaloff>../../IMG8RES FOR QT/stat.png</iconset>
             </property>
            </widget>
           </item>
@@ -1231,14 +1232,12 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
      <x>0</x>
      <y>0</y>
      <width>890</width>
-     <height>26</height>
+     <height>30</height>
     </rect>
    </property>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
- <resources>
-  <include location="image.qrc"/>
- </resources>
+ <resources/>
  <connections/>
 </ui>

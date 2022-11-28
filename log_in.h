@@ -1,6 +1,6 @@
 #ifndef LOG_IN_H
 #define LOG_IN_H
-
+#include"Atelier_Arduino_v2/arduino.h"
 #include <QMainWindow>
 #include<QSqlQueryModel>
 namespace Ui {
@@ -24,6 +24,10 @@ private slots:
 
 private:
     Ui::log_in *ui;
+    QByteArray data; // variable contenant les données reçues
+
+    Arduino A; // objet temporaire
+int trys=0;
 };
 
 #endif // LOG_IN_H
