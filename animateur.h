@@ -37,6 +37,11 @@ public:
    QSqlQueryModel * tri_id();
   QSqlQueryModel * planning(QString nom);
   QSqlQueryModel * details(int id);
+    QString fonction(int id);
+    QSqlQuery select(int id);
+    QSqlQuery select_nom(int RJC);
+    int select1(QString val);
+
 
 };
 

@@ -5,7 +5,7 @@
 #include <QSqlDatabase>
 #include "animateur.h"
 #include "statistique_c.h"
-
+#include "arduino.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -40,9 +40,16 @@ private slots:
 
      void on_details_clicked();
 
+     void on_RJC_clicked();
+
+     void on_RJC1_clicked();
+
 private:
     Ui::MainWindow *ui;
      statistique_c * statistique_c;
     Animateur A;
+    QByteArray data ; // variable contenant les données reçues
+    Arduino A1;       // objet temporaire
+
 };
 #endif // MAINWINDOW_H

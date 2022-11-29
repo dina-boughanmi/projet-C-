@@ -1,5 +1,6 @@
 #include "animateur.h"
 #include "connexion.h"
+#include <QMessageBox>
 #include <QSqlQuery>
 #include <QtDebug>
 #include <QSqlDatabase>
@@ -133,4 +134,78 @@ QSqlQueryModel * Animateur::details(int id)
      model->setQuery("SELECT * FROM DETAILS_EMISSION LEFT JOIN EMISSION ON DETAILS_EMISSION.ID_EMIS = EMISSION.ID_EMISSION where upper(ID_EMISSION) LIKE upper('%"+id_string+"%')");
     return model;
 
+}
+
+
+QString Animateur::fonction(int id)
+{
+    QSqlQuery query;
+          QString id_string=QString::number(id);
+           query.prepare("select * from publicite where id_pub=?");
+           query.addBindValue(id_string);
+           int RJC=query.value(3).toInt();
+
+            qDebug() << RJC;
+         QString RJC_string=QString::number(RJC);
+           query.prepare("select * from invite where id_i=?");
+           query.addBindValue(RJC_string);
+           QString nom=query.value(1).toString();
+
+            qDebug() << nom;
+
+       return nom;
+
+}
+
+QSqlQuery Animateur::select(int id)
+{
+    QSqlQuery qry;
+    QString val=QString::number(id);
+    qry.prepare("select * from PUBLICITE where ID_PUB=?");
+    qry.addBindValue(val);
+    qry.next();
+    return qry;
+}
+
+
+QSqlQuery Animateur::select_nom(int RJC)
+{
+    QSqlQuery qry;
+    QString val=QString::number(RJC);
+    qry.prepare("select * from INVITE where ID_I=?");
+    qry.addBindValue(val);
+
+    qry.next();
+    return qry;
+}
+
+
+
+
+int Animateur::select1(QString val)
+{
+    QSqlQuery qry;
+
+    int x=0;
+
+
+
+    qry.prepare("SELECT * FROM PUBLICITE where ID_PUB='"+val+"'");
+         if(qry.exec())
+         {
+    if(qry.isActive())
+    {
+        QMessageBox::information(0,"Good Query", "Good Query.  It\'s active");
+             qry.prepare("select * from PUBLICITE where regexp_like(RJC,:RJC);");
+             qry.bindValue(":RJC",x);
+            qDebug() << x;
+             qDebug() << qry.value(2).toInt();
+
+    }
+    else
+        QMessageBox::warning(0, "Bad Query", "Bad Query, It\'s inactive");
+
+
+    return x;
+    }
 }

@@ -1,5 +1,6 @@
 #include "mainwindow.h"
 #include "dialog_stats.h"
+#include "arduino.h"
 #include "ui_mainwindow.h"
 #include "animateur.h"
 #include "connexion.h"
@@ -24,6 +25,19 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    int ret=A1.connect_arduino(); // lancer la connexion à arduino
+            switch(ret){
+            case(0):qDebug()<< "arduino is available and connected to : "<< A1.getarduino_port_name();
+                break;
+            case(1):qDebug() << "arduino is available but not connected to :" <<A1.getarduino_port_name();
+               break;
+            case(-1):qDebug() << "arduino is not available";
+
+            }
+
+            QObject::connect(A1.getserial(),SIGNAL(readyRead()),this,SLOT(update_label()));
+         // permet de lancer le slot update_label suite a la reception du signal readyRead (reception des données).
+
     ui->lineEdit_id->setValidator(new QIntValidator(0, 999999, this));
     ui->tab_animateur->setModel(A.afficher());
 }
@@ -205,4 +219,51 @@ void MainWindow::on_statistique_clicked()
     Dialog_stats s;
     s.setModal(true);
     s.exec();
+}
+
+void MainWindow::on_RJC_clicked()
+{
+    int id=ui->l_pub->text().toInt();
+      QSqlQuery qry=A.select(id);
+
+      int RJC=qry.value(3).toInt();
+       qDebug() << RJC;
+      QSqlQuery qry1=A.select_nom(RJC);
+
+      QString nom=qry1.value(1).toString();
+       qDebug() << nom;
+
+     QString c;
+
+    for (int i=0; i < nom.length(); i++)
+          {
+            c = nom.at(i);
+            QByteArray m= c.toUtf8();
+            A1.write_to_arduino(m);
+          }
+}
+
+void MainWindow::on_RJC1_clicked()
+{
+    int id = ui->l_pub->text().toUInt();
+
+       QString h= A1.select(id);
+
+       ui->pointage->setText(h);
+
+       QString msg=ui->pointage->text();
+
+       ui->pointage->setText(msg);
+       if (msg=="")
+           msg="-----ERREUR-----";
+       QString c;
+
+       for (int i=0; i < msg.length(); i++)
+         {
+           c = msg.at(i);
+           QByteArray m= c.toUtf8();
+            qDebug() << "dina";
+           A1.write_to_arduino(m);
+         }
+
 }

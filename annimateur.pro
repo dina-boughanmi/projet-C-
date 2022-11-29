@@ -1,6 +1,7 @@
 CONFIG += console c++11
 QT       += core gui sql
 QT += printsupport
+QT += serialport
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 
@@ -20,6 +21,7 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     animateur.cpp \
+    arduino.cpp \
     connexion.cpp \
     dialog_stats.cpp \
     main.cpp \
@@ -28,6 +30,7 @@ SOURCES += \
 
 HEADERS += \
     animateur.h \
+    arduino.h \
     connexion.h \
     dialog_stats.h \
     mainwindow.h \

@@ -33,15 +33,15 @@ void Dialog_stats::MakeStat()
 {
     /***** Background *****/
     QLinearGradient gradient(0, 0, 0, 400);
-    gradient.setColorAt(0, QColor(255, 255, 255));
+    gradient.setColorAt(0, QColor(255, 170, 255));
     ui->plot->setBackground(QBrush(gradient));
     QCPBars *A = new QCPBars(ui->plot->xAxis, ui->plot->yAxis);
     A->setAntialiased(false);
     A->setStackingGap(1);
     /***** Couleurs*****/
     A->setName("Les nbr enfants selon les ID_ANIM");
-    A->setPen(QPen(QColor(255, 0, 0).lighter(120)));
-    A->setBrush(QColor(39, 39, 39));
+    A->setPen(QPen(QColor(170, 85, 255).lighter(120)));
+    A->setBrush(QColor(170, 85, 255));
     /***** Axe des abscisses *****/
     QVector<double> ticks;
     QVector<QString> labels;
