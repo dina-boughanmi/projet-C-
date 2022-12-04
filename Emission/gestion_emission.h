@@ -15,8 +15,8 @@
 #include <QMainWindow>
 #include "emission.h"
 #include <QtCharts>
-#include "dialog_stats.h"
-#include"arduino.h"
+#include "Emission/d_stats.h"
+#include"Atelier_Arduino_v2/arduino.h"
 
 namespace Ui {
 class Gestion_emission;
@@ -69,13 +69,15 @@ private slots:
    // void on_stats_clicked();
  void updatestring();
 void update_label();
+void on_pushButton_2_clicked();
+
 private:
 
     Ui::Gestion_emission *ui;
     Emission E;
-    Dialog_stats *s;
+    D_stats *s;
     QString data ;
-    arduino A;
+    Arduino A;
 
 
 };

@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>849</width>
-    <height>554</height>
+    <height>606</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -18,7 +18,7 @@
     <property name="geometry">
      <rect>
       <x>0</x>
-      <y>0</y>
+      <y>40</y>
       <width>851</width>
       <height>531</height>
      </rect>
@@ -37,7 +37,7 @@
       <property name="geometry">
        <rect>
         <x>0</x>
-        <y>0</y>
+        <y>40</y>
         <width>741</width>
         <height>411</height>
        </rect>
@@ -649,6 +649,19 @@ font: 8pt &quot;MS Shell Dlg 2&quot;;
      </widget>
     </widget>
    </widget>
+   <widget class="QPushButton" name="pushButton_2">
+    <property name="geometry">
+     <rect>
+      <x>600</x>
+      <y>20</y>
+      <width>93</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>quitter</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
@@ -656,7 +669,7 @@ font: 8pt &quot;MS Shell Dlg 2&quot;;
      <x>0</x>
      <y>0</y>
      <width>849</width>
-     <height>22</height>
+     <height>26</height>
     </rect>
    </property>
   </widget>

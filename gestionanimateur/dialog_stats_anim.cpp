@@ -1,4 +1,4 @@
-#include "Dialog_stats_anim.h"
+#include "gestionanimateur/Dialog_stats_anim.h"
 #include "ui_Dialog_stats_anim.h"
 #include "qcustomplot.h"
 #include "animateur.h"

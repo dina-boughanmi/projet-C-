@@ -30,6 +30,11 @@ CONFIG += c++11
 
 SOURCES += \
     Atelier_Arduino_v2/arduino.cpp \
+    Emission/d_stats.cpp \
+    Emission/emission.cpp \
+    Emission/gestion_emission.cpp \
+    Emission/qrcode.cpp \
+    Emission/qrcodegeneratordemo.cpp \
     SMTPClient/email.cpp \
     SMTPClient/emailaddress.cpp \
     SMTPClient/smtpclient.cpp \
@@ -60,6 +65,10 @@ SOURCES += \
 
 HEADERS += \
     Atelier_Arduino_v2/arduino.h \
+    Emission/d_stats.h \
+    Emission/emission.h \
+    Emission/gestion_emission.h \
+    Emission/qrcode.h \
     SMTPClient/email.h \
     SMTPClient/emailaddress.h \
     SMTPClient/smtpclient.h \
@@ -89,6 +98,8 @@ HEADERS += \
     studio.h
 
 FORMS += \
+    Emission/Gestion_emission.ui \
+    Emission/d_stats.ui \
     gestion_studio.ui \
     gestionanimateur/dialog_stats_anim.ui \
     gestionanimateur/gestion_animateur.ui \
@@ -111,6 +122,13 @@ RESOURCES += \
 
 DISTFILES += \
     ../../onair.png \
+    Emission/03919e8ec0f64df6838277e33fe851ea.jpg \
+    Emission/685258a59fe86509645caa9373bb5dea.jpg \
+    Emission/8b5800b477da5272aeb1c2a599bd4027.jpg \
+    Emission/Liste.pdf \
+    Emission/ade1218ecd6c98294857f5aa14752c77.jpg \
+    Emission/c9d5e5b2061c9d651d6d84a9fa633609.jpg \
+    Emission/cb9e027338e35776f778214e78bfac8c.jpg \
     SMTPClient/SMTPClient.pri \
     annimateur - Copie - Copie (2)/liste.pdf \
     annimateur - Copie - Copie (2)/liste.pdf \

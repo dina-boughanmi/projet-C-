@@ -1,6 +1,5 @@
-#ifndef STAT_COMBO_H
-#define STAT_COMBO_H
-
+#ifndef DIALOG_STATS_H
+#define DIALOG_STATS_H
 
 #include <QDialog>
 
@@ -22,18 +21,23 @@
 QT_CHARTS_USE_NAMESPACE
 
 namespace Ui {
-class stat_combo;
+class D_stats;
 }
-class stat_combo:public QDialog
+
+class D_stats : public QDialog
 {
     Q_OBJECT
+
 public:
-        explicit stat_combo(QWidget *parent= nullptr );
-    ~ stat_combo();
-    QChartView *chartview;
+    explicit D_stats(QWidget *parent = nullptr);
+    ~D_stats();
+
+    QChartView *chartView ;
+    void choix_bar();
     void choix_pie();
+
 private:
-    Ui::stat_combo *ui;
+    Ui::D_stats *ui;
 };
 
-#endif // STAT_COMBO_H
+#endif // DIALOG_STATS_H

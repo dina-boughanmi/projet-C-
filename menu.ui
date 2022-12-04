@@ -502,6 +502,19 @@ QPushButton::focus {
       <string>gestion  invite </string>
      </property>
     </widget>
+    <widget class="QPushButton" name="gestionemission">
+     <property name="geometry">
+      <rect>
+       <x>80</x>
+       <y>230</y>
+       <width>201</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>gestion emission</string>
+     </property>
+    </widget>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">

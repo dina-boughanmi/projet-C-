@@ -1,7 +1,7 @@
 #include "Gestion_emission.h"
 #include "ui_Gestion_emission.h"
 #include "emission.h"
-#include "dialog_stats.h"
+#include "Emission/d_stats.h"
 #include "qrcode.h"
 #include <QMessageBox>
 #include<QIntValidator>
@@ -15,15 +15,15 @@
 #include <string>
 #include<QtCharts>
 #include<QDialog>
-#include"arduino.h"
 #include"QDebug"
-
+#include"Atelier_Arduino_v2/arduino.h"
+#include"menu.h"
 Gestion_emission::Gestion_emission(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::Gestion_emission)
 {
-    ui->setupUi(this);
-    ui->tab_Emission->setModel(E.afficher());
+      ui->setupUi(this);
+      ui->tab_Emission->setModel(E.afficher());
      ui->le_ID_Emission->setValidator(new QIntValidator(100, 9999999, this));
      ui->lineEdit_2->setValidator(new QIntValidator(100, 9999999, this));
      ui->le_Nom->setInputMask("AAAAAAAAAAAAAAAAAAAA");
@@ -294,7 +294,7 @@ void Gestion_emission::on_pb_stats_clicked()
 
 void Gestion_emission::on_pb_stats_clicked()
 {
-    s = new Dialog_stats();
+    s = new D_stats();
 
   s->setWindowTitle("statistique ComboBox");
   s->choix_pie();
@@ -355,5 +355,7 @@ void Gestion_emission::update_label()  { //label arduino
 
 void Gestion_emission::on_pushButton_2_clicked()
 {
-    
+    menu *w =new menu;
+    w->show();
+    this->hide();
 }

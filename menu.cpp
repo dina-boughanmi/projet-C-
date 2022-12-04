@@ -5,6 +5,7 @@
 #include"gestionanimateur/gestion_animateur.h"
 #include"gestionanimateur/animateur.h"
 #include"invite/Gestion_de_invite.h"
+#include"Emission/gestion_emission.h"
 menu::menu(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::menu)
@@ -43,4 +44,11 @@ void menu::on_gestioninvite_clicked()
     Gestion_de_invite *w=new Gestion_de_invite;
     w->show();
     this->hide();
+}
+
+void menu::on_gestionemission_clicked()
+{
+   Gestion_emission *w = new Gestion_emission;
+   w->show();
+   this->hide();
 }

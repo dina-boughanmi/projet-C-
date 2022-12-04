@@ -24,6 +24,8 @@ private slots:
 
     void on_gestioninvite_clicked();
 
+    void on_gestionemission_clicked();
+
 private:
     Ui::menu *ui;
 };

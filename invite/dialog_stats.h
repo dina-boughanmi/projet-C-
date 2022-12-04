@@ -4,6 +4,23 @@
 #include <QDialog>
 #include "QtPrintSupport"
 
+//#include <QDialog>
+
+#include <QSqlDatabase>
+#include <QSqlError>
+#include <QSqlQuery>
+
+#include <QtCharts/QChartView>
+#include <QtCharts/QBarSeries>
+#include <QtCharts/QBarSet>
+#include <QtCharts/QLegend>
+#include <QtCharts/QBarCategoryAxis>
+#include <QtCharts/QHorizontalStackedBarSeries>
+#include <QtCharts/QLineSeries>
+#include <QtCharts/QCategoryAxis>
+#include <QtCharts/QPieSeries>
+#include <QtCharts/QPieSlice>
+
 namespace Ui {
 class Dialog_stats;
 }
@@ -18,7 +35,8 @@ public:
 
 private slots:
     void on_pushButton_clicked();
-
+    void choix_bar();
+    void choix_pie();
 private:
     Ui::Dialog_stats *ui;
     void MakeStat();

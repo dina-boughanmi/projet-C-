@@ -1,19 +1,19 @@
-#include "dialog_stats.h"
-#include "ui_dialog_stats.h"
+#include "Emission/d_stats.h"
+#include "ui_d_stats.h"
 
-Dialog_stats::Dialog_stats(QWidget *parent) :
+D_stats::D_stats(QWidget *parent) :
     QDialog(parent),
-    ui(new Ui::Dialog_stats)
+    ui(new Ui::D_stats)
 {
     ui->setupUi(this);
 }
 
-Dialog_stats::~Dialog_stats()
+D_stats::~D_stats()
 {
     delete ui;
 }
 //pie chart
-    void Dialog_stats::choix_pie()
+    void D_stats::choix_pie()
     {
     QSqlQuery q1,q2,q3,q4,q5;
     qreal tot=0,c1=0,c2=0,c3=0,c4=0;

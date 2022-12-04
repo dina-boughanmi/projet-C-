@@ -99,3 +99,4 @@ void Dialog_stats::MakeStat()
     ui->plot->legend->setFont(legendFont);
     ui->plot->setInteractions(QCP::iRangeDrag | QCP::iRangeZoom);
 }
+

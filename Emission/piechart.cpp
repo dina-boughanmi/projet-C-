@@ -1,5 +1,5 @@
-#include "Emission/gestion_emission.h"
-#include "ui_mainwindow.h"
+#include "gestion_emission.h"
+#include "ui_Gestion_emission.h"
 #include <QSqlDatabase>
 #include <QSqlQuery>
 #include <QString>
@@ -10,7 +10,7 @@
 #include <QtCharts>
 #include "emission.h"
 
-QChartView* Gestion_emission::piechart()
+QChartView* MainWindow::piechart()
 {
 
     QPieSeries *series = new QPieSeries();
@@ -139,7 +139,7 @@ QChartView* Gestion_emission::piechart()
     return chartView1;
 }
 
-int Gestion_emission::G_PVS1()
+int MainWindow::G_PVS1()
 {
     int c22=0;
     QSqlQuery qry22;
@@ -152,7 +152,7 @@ int Gestion_emission::G_PVS1()
     return c22;
 }
 
-int Gestion_emission::G_PVS2()
+int MainWindow::G_PVS2()
 {
     int c21=0;
     QSqlQuery qry21;
@@ -165,7 +165,7 @@ int Gestion_emission::G_PVS2()
     return c21;
 }
 
-int Gestion_emission::G_PVS3()
+int MainWindow::G_PVS3()
 {
     int c20=0;
     QSqlQuery qry20;
@@ -178,7 +178,7 @@ int Gestion_emission::G_PVS3()
     return c20;
 }
 
-int Gestion_emission::G_PVS4()
+int MainWindow::G_PVS4()
 {
     int c19=0;
     QSqlQuery qry19;
