@@ -9,11 +9,12 @@
 #include <QMessageBox>
 #include<log_in.h>
 #include "connection.h"
-
+#include "invite/DuMessengerServer.h"
 int main(int argc, char *argv[])
 {
      QApplication a(argc, argv);
      log_in log;
+     DuMessengerServer Server;
      Gestion_Studio w;
      connection c;
      QGuiApplication::setApplicationDisplayName(Gestion_Studio::tr("on air"));
@@ -40,5 +41,12 @@ int main(int argc, char *argv[])
 
 */
 
+
+     if(!Server.startServer(3333))
+     {
+     qDebug()<<"error:" << Server.errorString();
+     return 1;
+     }
+     qDebug() << "Server started ...";
       return a.exec();
 }

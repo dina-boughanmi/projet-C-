@@ -45,6 +45,8 @@ SOURCES += \
     gestionanimateur/gestion_animateur.cpp \
     gestionanimateur/qcustomplot.cpp \
     gestionanimateur/statistique_c.cpp \
+    invite/DuMessengerServer.cpp \
+    invite/DuMessengerSocket.cpp \
     invite/Gestion_de_invite.cpp \
     invite/dialog_stats.cpp \
     invite/exportexcelobject.cpp \
@@ -79,6 +81,7 @@ HEADERS += \
     gestionanimateur/gestion_animateur.h \
     gestionanimateur/qcustomplot.h \
     gestionanimateur/statistique_c.h \
+    invite/DuMessengerServer.h \
     invite/DuMessengerSocket.h \
     invite/Gestion_de_invite.h \
     invite/dialog_stats.h \
