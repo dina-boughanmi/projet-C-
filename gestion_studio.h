@@ -1,5 +1,5 @@
-#ifndef MAINWINDOW_H
-#define MAINWINDOW_H
+#ifndef Gestion_Studio_H
+#define Gestion_Studio_H
 
 #include <QMainWindow>
 #include "studio.h"
@@ -16,7 +16,7 @@ namespace Ui
 class QCheckBox;
 class QLabel;
 class QErrorMessage;
-class MainWindow;
+class Gestion_Studio;
 class QChart;
 }
 QT_END_NAMESPACE
@@ -26,13 +26,13 @@ class QChartView;
 class QChart;
 QT_CHARTS_END_NAMESPACE
 
-class MainWindow : public QMainWindow
+class Gestion_Studio : public QMainWindow
 {
     Q_OBJECT
 
 public:
-    MainWindow(QWidget *parent = nullptr);
-    ~MainWindow();
+    Gestion_Studio(QWidget *parent = nullptr);
+    ~Gestion_Studio();
 
  void update();
 
@@ -77,15 +77,17 @@ private slots:
 
     void on_pushButton_stat2_clicked();
 
+    void on_quitter_pushbottn_clicked();
+
 private:
      Email createEmail();
 
 
 private:
 
-    Ui::MainWindow *ui;
+    Ui::Gestion_Studio *ui;
     studio STUDIO;
     QLabel *adressLabel;
     SMTPClient *client_;
 };
-#endif // MAINWINDOW_H
+#endif // Gestion_Studio_H

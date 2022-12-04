@@ -1,25 +1,22 @@
 #include "arduino.h"
-#include<QSqlQuery>
-Arduino::Arduino()
+
+arduino::arduino()
 {
+
     data="";
     arduino_port_name="";
     arduino_is_available=false;
     serial=new QSerialPort;
-}
 
-QString Arduino::getarduino_port_name()
-{
+}
+QSerialPort * arduino::getserial(){
+ return serial;
+}
+QString arduino::getarduino_port_name(){
     return arduino_port_name;
 }
-
-QSerialPort *Arduino::getserial()
+int arduino::connect_arduino()
 {
-   return serial;
-}
-int Arduino::connect_arduino()
-{   // recherche du port sur lequel la carte arduino identifée par  arduino_uno_vendor_id
-    // est connectée
     foreach (const QSerialPortInfo &serial_port_info, QSerialPortInfo::availablePorts()){
            if(serial_port_info.hasVendorIdentifier() && serial_port_info.hasProductIdentifier()){
                if(serial_port_info.vendorIdentifier() == arduino_uno_vendor_id && serial_port_info.productIdentifier()
@@ -41,58 +38,28 @@ int Arduino::connect_arduino()
             return 1;
         }
         return -1;
-}
-
-int Arduino::close_arduino()
-
+    }
+int arduino::close_arduino()
 {
-
     if(serial->isOpen()){
-            serial->close();
-            return 0;
-        }
-    return 1;
-
+        serial->close();
+        return 0;
+    }return 1;
+}
+QByteArray arduino::read_from_arduino()
+{
+    if(serial->isReadable())
+       data=serial->readAll();
+        return data;
 
 }
-
-
- QByteArray Arduino::read_from_arduino()
+int arduino::write_to_arduino(QByteArray d)
 {
-    if(serial->isReadable()){
-         data=serial->readAll(); //récupérer les données reçues
+    if(serial->isWritable())
 
-         return data;
-    }
- }
+        serial->write(d);
 
-
-int Arduino::write_to_arduino( QByteArray d)
-
-{
-
-    if(serial->isWritable()){
-        serial->write(d);  // envoyer des donnés vers Arduino
-    }else{
-        qDebug() << "Couldn't write to serial!";
-    }
-
-
-}
-QString Arduino::select(int id)
-{
-    QSqlQuery qry;
-    qry.prepare("select RJC from PUBLICITE where ID_PUB=?");
-    qry.addBindValue(id);
-
-    if(qry.exec())
-        {
-            while (qry.next())
-                {
-                int RJC= qry.value(0).toInt();
-                QString RJC_string=QString::number(RJC);
-                return RJC_string;
-        }
-    }
+    else
+        qDebug()<<"couldn't wrtie to serial!";
 
 }

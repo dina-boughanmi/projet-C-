@@ -34,10 +34,24 @@ SOURCES += \
     SMTPClient/emailaddress.cpp \
     SMTPClient/smtpclient.cpp \
     connection.cpp \
+    gestion_studio.cpp \
+    gestionanimateur/animateur.cpp \
+    gestionanimateur/dialog_stats_anim.cpp \
+    gestionanimateur/gestion_animateur.cpp \
+    gestionanimateur/qcustomplot.cpp \
+    gestionanimateur/statistique_c.cpp \
+    invite/Gestion_de_invite.cpp \
+    invite/dialog_stats.cpp \
+    invite/exportexcelobject.cpp \
+    invite/invite.cpp \
+    invite/messengerclient.cpp \
+    invite/messengerconnection.cpp \
+    invite/messengerserver.cpp \
+    invite/messengersocket.cpp \
     log_in.cpp \
     log_param.cpp \
     main.cpp \
-    mainwindow.cpp \
+    menu.cpp \
     piechartdrilldown/drilldownchart.cpp \
     piechartdrilldown/drilldownslice.cpp \
     stat2.cpp \
@@ -50,9 +64,24 @@ HEADERS += \
     SMTPClient/emailaddress.h \
     SMTPClient/smtpclient.h \
     connection.h \
+    gestion_studio.h \
+    gestionanimateur/animateur.h \
+    gestionanimateur/dialog_stats_anim.h \
+    gestionanimateur/gestion_animateur.h \
+    gestionanimateur/qcustomplot.h \
+    gestionanimateur/statistique_c.h \
+    invite/DuMessengerSocket.h \
+    invite/Gestion_de_invite.h \
+    invite/dialog_stats.h \
+    invite/exportexcelobject.h \
+    invite/invite.h \
+    invite/messengerclient.h \
+    invite/messengerconnection.h \
+    invite/messengerserver.h \
+    invite/messengersocket.h \
     log_in.h \
     log_param.h \
-    mainwindow.h \
+    menu.h \
     piechartdrilldown/drilldownchart.h \
     piechartdrilldown/drilldownslice.h \
     stat2.h \
@@ -60,9 +89,17 @@ HEADERS += \
     studio.h
 
 FORMS += \
+    gestion_studio.ui \
+    gestionanimateur/dialog_stats_anim.ui \
+    gestionanimateur/gestion_animateur.ui \
+    gestionanimateur/statistique_c.ui \
+    invite/Gestion_de_invite.ui \
+    invite/dialog_stats.ui \
+    invite/messengerclient.ui \
+    invite/messengerconnection.ui \
     log_in.ui \
     log_param.ui \
-    mainwindow.ui
+    menu.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
@@ -70,10 +107,19 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 RESOURCES += \
-    imag.qrc
+    invite/resource.qrc
 
 DISTFILES += \
     ../../onair.png \
     SMTPClient/SMTPClient.pri \
+    annimateur - Copie - Copie (2)/liste.pdf \
+    annimateur - Copie - Copie (2)/liste.pdf \
+    annimateur - Copie - Copie (2)/liste.pdf \
+    annimateur - Copie - Copie (2)/liste.pdf \
     icons8-fingerprint-scan.gif
+
+SUBDIRS += \
+    annimateur - Copie - Copie (2)/annimateur.pro \
+    annimateur - Copie - Copie (2)/annimateur.pro \
+    annimateur - Copie - Copie (2)/annimateur.pro
 

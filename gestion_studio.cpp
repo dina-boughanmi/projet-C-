@@ -1,5 +1,5 @@
-#include "mainwindow.h"
-#include "ui_mainwindow.h"
+#include "gestion_studio.h"
+#include "ui_gestion_studio.h"
 #include"qdialog.h"
 #include<stat2.h>
 #include <QLabel>
@@ -32,14 +32,14 @@
 
 #include "statistique.h"
 
-
+#include"menu.h"
 #include <QtCharts>
 
   using namespace QtCharts;
 
-MainWindow::MainWindow(QWidget *parent)
+Gestion_Studio::Gestion_Studio(QWidget *parent)
     : QMainWindow(parent)
-    , ui(new Ui::MainWindow)
+    , ui(new Ui::Gestion_Studio)
 {
     ui->setupUi(this);
     //controle de saisie
@@ -97,17 +97,17 @@ mov->start();
 
 }
 
-MainWindow::~MainWindow()
+Gestion_Studio::~Gestion_Studio()
 {
       client_->deleteLater();
     delete ui;
 }
- void MainWindow::update()
+ void Gestion_Studio::update()
 {    ui->tableView_2->setModel(STUDIO.afficher_studio());
      ui->tableView_6->setModel(STUDIO.afficher_studio());
 }
 
-void MainWindow::on_pushButton_2_clicked() //ajout
+void Gestion_Studio::on_pushButton_2_clicked() //ajout
 {
    // int id_s=ui->lineEdit_12->text().toInt();
     int capacite=ui->lineEdit_ajout_capasiti->text().toInt();
@@ -133,7 +133,7 @@ else
                             "Click Cancel to exit."), QMessageBox::Cancel);}
 }
 
-void MainWindow::on_pushButton_5_clicked()//suppresstion
+void Gestion_Studio::on_pushButton_5_clicked()//suppresstion
 {
     //int id=ui->lineEdit_17->text().toInt();
   int id=ui->lineEdit_supp->text().toInt();
@@ -157,7 +157,7 @@ void MainWindow::on_pushButton_5_clicked()//suppresstion
 }
 
 
-void MainWindow::on_pushButton_3_clicked()//pdf
+void Gestion_Studio::on_pushButton_3_clicked()//pdf
 {
     QString fileName = QFileDialog::getSaveFileName((QWidget* )0, "Export PDF", QString(), "*.pdf");
         if (QFileInfo(fileName).suffix().isEmpty()) { fileName.append(".pdf"); }
@@ -187,7 +187,7 @@ void MainWindow::on_pushButton_3_clicked()//pdf
 }
 
 
-void MainWindow::on_pushButton_7_clicked()//update
+void Gestion_Studio::on_pushButton_7_clicked()//update
 {
 //    int ID_station(ui->le_m_old_studio->text().toInt());
      int ID_STUDIO(ui->le_modifer_id_studio->text().toInt());
@@ -208,19 +208,19 @@ void MainWindow::on_pushButton_7_clicked()//update
      else QMessageBox::critical(this,tr("Edit"),tr("Update Failed !"));
 }
 
-void MainWindow::on_pushButton_9_clicked()//affich
+void Gestion_Studio::on_pushButton_9_clicked()//affich
 {
 
     ui->tableView_2->setModel(STUDIO.afficher_studio());
 }
 
-void MainWindow::on_pushButton_8_clicked()//affich
+void Gestion_Studio::on_pushButton_8_clicked()//affich
 {
 
     ui->tableView_2->setModel(STUDIO.afficher_studio());
 }
 
-void MainWindow::on_tabwidget_currentChanged(int index)
+void Gestion_Studio::on_tabwidget_currentChanged(int index)
 {
 
 
@@ -234,7 +234,7 @@ void MainWindow::on_tabwidget_currentChanged(int index)
 
 }
 
-Email MainWindow::createEmail()
+Email Gestion_Studio::createEmail()
 {
     // Create the credentials EmailAddress
     EmailAddress credentials(ui->lineEditEmailCredentials_6->text(),
@@ -255,7 +255,7 @@ Email MainWindow::createEmail()
 
     return email;
 }
-void MainWindow::sendEmail()
+void Gestion_Studio::sendEmail()
 {
     // Create the email object
     Email email = createEmail();
@@ -271,7 +271,7 @@ void MainWindow::sendEmail()
     // Try to send the email
     client_->sendEmail(email);
 }
-void MainWindow::clearFields()//clearlineedit
+void Gestion_Studio::clearFields()//clearlineedit
 {
     ui->lineEditEmailCredentials_6->clear();
     ui->lineEditPasswordCredentials_6->clear();
@@ -280,7 +280,7 @@ void MainWindow::clearFields()//clearlineedit
     ui->lineEditSubject_6->clear();
     ui->textEditContent_6->clear();
 }
-void MainWindow::onStatus(Status::e status, QString errorMessage)//mail status
+void Gestion_Studio::onStatus(Status::e status, QString errorMessage)//mail status
 {
     // Show a message based on the Status
     switch (status)
@@ -305,7 +305,7 @@ void MainWindow::onStatus(Status::e status, QString errorMessage)//mail status
 
 
 
-void MainWindow::on_checkBox_3_stateChanged(int arg1)//tri
+void Gestion_Studio::on_checkBox_3_stateChanged(int arg1)//tri
 {   //affichage desendant id_studio
 
    if(arg1)
@@ -315,7 +315,7 @@ void MainWindow::on_checkBox_3_stateChanged(int arg1)//tri
    }
 }
 
-void MainWindow::on_checkBox_2_stateChanged(int arg2)//tri
+void Gestion_Studio::on_checkBox_2_stateChanged(int arg2)//tri
 {
     //afficher  desendeant id station
     if (arg2){}
@@ -323,14 +323,14 @@ void MainWindow::on_checkBox_2_stateChanged(int arg2)//tri
 
 }
 
-void MainWindow::on_checkBox_stateChanged(int arg3)//tri
+void Gestion_Studio::on_checkBox_stateChanged(int arg3)//tri
 {
     //afficher desendent par capasite
     if(arg3){
     ui->tableView_2->setModel(STUDIO.afficherdown_capasite());}
 }
 
-void MainWindow::on_pushButton_clicked()//recherch
+void Gestion_Studio::on_pushButton_clicked()//recherch
 {
     QString texte=ui->lineEdit_recherche->text();
     QSqlQueryModel *verif_recherche=STUDIO.rechercher_id_studio_or_capasite(texte);
@@ -338,14 +338,14 @@ void MainWindow::on_pushButton_clicked()//recherch
 }
 
 
-void MainWindow::on_pushButton_4_clicked()
+void Gestion_Studio::on_pushButton_4_clicked()
 {
 
 statistique();
 
 }
 
-void MainWindow::on_modiferbotton_clicked()
+void Gestion_Studio::on_modiferbotton_clicked()
 {
     int ID_STUDIO(ui->le_modifer_id_studio->text().toInt());
     int CAPACITE(ui->le_modifer_capasi->text().toInt());
@@ -366,7 +366,7 @@ qDebug()<<"modifer"<<TEST;
     else QMessageBox::critical(this,tr("Edit"),tr("Update Failed !"));
 }
 
-void MainWindow::on_pushButton_29_clicked()
+void Gestion_Studio::on_pushButton_29_clicked()
 {
     //int id=ui->lineEdit_17->text().toInt();
   int id=ui->lineEdit_supp->text().toInt();
@@ -389,7 +389,14 @@ void MainWindow::on_pushButton_29_clicked()
                                 "Click Cancel to exit."), QMessageBox::Cancel);}
 }
 
-void MainWindow::on_pushButton_stat2_clicked()
+void Gestion_Studio::on_pushButton_stat2_clicked()
 {
  stat2();
+}
+
+void Gestion_Studio::on_quitter_pushbottn_clicked()
+{
+    menu *w =new menu;
+    w->show();
+    this->hide();
 }

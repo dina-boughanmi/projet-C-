@@ -1,4 +1,4 @@
-#include "mainwindow.h"
+#include "gestion_studio.h"
 #include <QApplication>
 #include <QStyleHints>
 #include <QDesktopWidget>
@@ -14,9 +14,9 @@ int main(int argc, char *argv[])
 {
      QApplication a(argc, argv);
      log_in log;
-     MainWindow w;
+     Gestion_Studio w;
      connection c;
-     QGuiApplication::setApplicationDisplayName(MainWindow::tr("on air"));
+     QGuiApplication::setApplicationDisplayName(Gestion_Studio::tr("on air"));
      c.createconnect();
      log.show();
       /*  if (!QGuiApplication::styleHints()->showIsFullScreen() && !QGuiApplication::styleHints()->showIsMaximized()) {

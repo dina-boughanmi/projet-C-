@@ -6,8 +6,8 @@
 #include <QLabel>
 #include"log_param.h"
 #include"Atelier_Arduino_v2/arduino.h"
-#include"mainwindow.h"
-
+#include"gestion_studio.h"
+#include"menu.h"
 log_in::log_in(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::log_in)
@@ -59,7 +59,7 @@ log_in::~log_in()
 void log_in::on_pushButton_clicked()
 {
 
-  MainWindow *w =new MainWindow  ;
+ menu  *w =new  menu  ;
     QString USERNAME(ui->lineEdit_loginusername->text());
      QString PWD(ui->lineEdit_loginpwd->text());
      bool verif_recherche=rechercher_user(USERNAME,PWD);
