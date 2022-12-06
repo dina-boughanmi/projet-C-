@@ -85,3 +85,57 @@ bool Emission::modifier()
     return query.exec();
 }
 
+void Emission::chercheID(QTableView *table, int id)
+{
+   QSqlQueryModel *model=new QSqlQueryModel();
+   QSqlQuery *query =new QSqlQuery;
+   query->prepare("select * from emission where regexp_like(ID_Emission,:id);");
+   query->bindValue(":id",id);
+   if(id==0)
+   {
+       query->prepare("select * from emission;");
+   }
+   query->exec();
+   model->setQuery(*query);
+   table->setModel(model);
+   table->show();
+}
+void Emission::clearTable(QTableView *table)
+{
+    QSqlQueryModel *model=new QSqlQueryModel();
+    model->clear();
+    table->setModel(model);
+}
+QSqlQueryModel * Emission::tri_id()
+{QSqlQueryModel * model= new QSqlQueryModel();
+
+model->setQuery("select * from emission order by ID_Emission");
+model->setHeaderData(0, Qt::Horizontal, QObject::tr("ID_Emission"));
+model->setHeaderData(1, Qt::Horizontal, QObject::tr("Animateur"));
+model->setHeaderData(2, Qt::Horizontal, QObject::tr("Date_Emission"));
+model->setHeaderData(3, Qt::Horizontal, QObject::tr("Nom"));
+
+    return model;
+}
+QSqlQueryModel * Emission::tri_nom()
+{QSqlQueryModel * model= new QSqlQueryModel();
+
+model->setQuery("select * from emission order by Nom");
+model->setHeaderData(0, Qt::Horizontal, QObject::tr("ID_Emission"));
+model->setHeaderData(1, Qt::Horizontal, QObject::tr("Animateur"));
+model->setHeaderData(2, Qt::Horizontal, QObject::tr("Date_Emission"));
+model->setHeaderData(3, Qt::Horizontal, QObject::tr("Nom"));
+
+    return model;
+}
+QSqlQueryModel * Emission::tri_animateur()
+{QSqlQueryModel * model= new QSqlQueryModel();
+
+model->setQuery("select * from emission order by Animateur");
+model->setHeaderData(0, Qt::Horizontal, QObject::tr("ID_Emission"));
+model->setHeaderData(1, Qt::Horizontal, QObject::tr("Animateur"));
+model->setHeaderData(2, Qt::Horizontal, QObject::tr("Date_Emission"));
+model->setHeaderData(3, Qt::Horizontal, QObject::tr("Nom"));
+
+    return model;
+}

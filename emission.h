@@ -12,7 +12,7 @@
 #include <QMessageBox>
 #include <QString>
 #include <QSqlQueryModel>
-
+#include<QTableView>
 #include <QSqlQuery>
 
 
@@ -33,8 +33,12 @@ public:
      QSqlQueryModel* afficher();
      bool supprimer (int);
      bool modifier();
-
-
+     Emission recherche(int);
+void chercheID(QTableView *table, int CIN);
+void clearTable(QTableView *table);
+   QSqlQueryModel* tri_id();
+   QSqlQueryModel* tri_nom();
+   QSqlQueryModel* tri_animateur();
 
 private:
     int ID_Emission , Date_emission ;
