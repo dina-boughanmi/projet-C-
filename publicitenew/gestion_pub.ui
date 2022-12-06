@@ -1035,6 +1035,19 @@ font: 8pt &quot;MS Shell Dlg 2&quot;;</string>
      </widget>
     </widget>
    </widget>
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>780</x>
+      <y>80</y>
+      <width>93</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>quitter</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">

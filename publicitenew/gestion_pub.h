@@ -77,6 +77,8 @@ private slots:
 
     void on_stat_pub_clicked();
 
+    void on_pushButton_clicked();
+
 private:
     Ui::gestion_pub *ui;
      publicite1 Etmp;

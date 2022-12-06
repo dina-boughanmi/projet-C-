@@ -34,7 +34,7 @@
 #include <QSerialPortInfo>
 #include <QMessageBox>
 #include <QLCDNumber>
-
+#include"menu.h"
 gestion_pub::gestion_pub(QWidget *parent)
     : QMainWindow(parent)
      , ui(new Ui::gestion_pub)
@@ -402,3 +402,10 @@ void gestion_pub::on_stat_pub_clicked()
 
 
 
+
+void gestion_pub::on_pushButton_clicked()
+{
+    menu *w =new menu;
+    w->show();
+    this->hide();
+}
