@@ -6,7 +6,7 @@
 #include"gestionanimateur/animateur.h"
 #include"invite/Gestion_de_invite.h"
 #include"Emission/gestion_emission.h"
-//#include"publicitenew/gestion_pub.h"
+#include"publicitenew/gestion_pub.h"
 menu::menu(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::menu)
@@ -71,7 +71,7 @@ void menu::on_gestionemission_clicked()
 void menu::on_publisiter_clicked()
 {
 
-         /*   gestion_pub *w = new gestion_pub;
+            gestion_pub *w = new gestion_pub;
             w->show();
             this->hide();
-*/}
+}

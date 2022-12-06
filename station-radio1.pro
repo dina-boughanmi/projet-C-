@@ -1,4 +1,4 @@
-QT  +=core gui sql
+QT  +=core gui sql  multimediawidgets svg
 QT +=network
 QT +=printsupport
 QT +=charts
@@ -59,6 +59,8 @@ SOURCES += \
     menu.cpp \
     piechartdrilldown/drilldownchart.cpp \
     piechartdrilldown/drilldownslice.cpp \
+    publicitenew/gestion_pub.cpp \
+    publicitenew/publicite1.cpp \
     stat2.cpp \
     statistique.cpp \
     studio.cpp
@@ -93,6 +95,8 @@ HEADERS += \
     menu.h \
     piechartdrilldown/drilldownchart.h \
     piechartdrilldown/drilldownslice.h \
+    publicitenew/gestion_pub.h \
+    publicitenew/publicite1.h \
     stat2.h \
     statistique.h \
     studio.h
@@ -110,7 +114,8 @@ FORMS += \
     invite/messengerconnection.ui \
     log_in.ui \
     log_param.ui \
-    menu.ui
+    menu.ui \
+    publicitenew/gestion_pub.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
