@@ -11,6 +11,20 @@ menu::menu(QWidget *parent) :
     ui(new Ui::menu)
 {
     ui->setupUi(this);
+    QMovie* movie = new QMovie("C:/Users/user/Documents/projet-C-/IMG8RES FOR QT/radio.gif");
+
+
+    if (!movie->isValid())
+    {
+
+        qDebug()<<"not valed gif";
+    }
+
+    // Play GIF
+    QLabel *label_gif= ui->radiolabel;
+   label_gif->setMovie(movie);
+    movie->start();
+     qDebug()<<"valed gif selket ";
 }
 
 menu::~menu()

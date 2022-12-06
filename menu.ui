@@ -6,20 +6,32 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>553</width>
-    <height>564</height>
+    <width>608</width>
+    <height>780</height>
    </rect>
   </property>
+  <property name="minimumSize">
+   <size>
+    <width>608</width>
+    <height>780</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>608</width>
+    <height>780</height>
+   </size>
+  </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string/>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QGroupBox" name="groupBox">
     <property name="geometry">
      <rect>
       <x>80</x>
-      <y>60</y>
-      <width>401</width>
+      <y>320</y>
+      <width>420</width>
       <height>421</height>
      </rect>
     </property>
@@ -450,71 +462,72 @@ QPushButton::focus {
     <property name="title">
      <string>GroupBox</string>
     </property>
-    <widget class="QPushButton" name="pushButton">
+    <widget class="QWidget" name="layoutWidget">
      <property name="geometry">
       <rect>
-       <x>80</x>
-       <y>70</y>
-       <width>201</width>
-       <height>28</height>
+       <x>100</x>
+       <y>80</y>
+       <width>211</width>
+       <height>281</height>
       </rect>
      </property>
-     <property name="text">
-      <string>gestion  studio</string>
-     </property>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <widget class="QPushButton" name="pushButton">
+        <property name="text">
+         <string>Gestion Studio</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="gestionanimateurpushbutton">
+        <property name="text">
+         <string>Gestion Animateur</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="gestioninvite">
+        <property name="text">
+         <string>Gestion Invite</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="gestionemission">
+        <property name="text">
+         <string>Gestion Emission</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_2">
+        <property name="text">
+         <string>Quitter</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
     </widget>
-    <widget class="QPushButton" name="pushButton_2">
-     <property name="geometry">
-      <rect>
-       <x>90</x>
-       <y>350</y>
-       <width>201</width>
-       <height>28</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>quitter</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="gestionanimateurpushbutton">
-     <property name="geometry">
-      <rect>
-       <x>80</x>
-       <y>130</y>
-       <width>201</width>
-       <height>28</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>gestion  animateur </string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="gestioninvite">
-     <property name="geometry">
-      <rect>
-       <x>80</x>
-       <y>190</y>
-       <width>201</width>
-       <height>28</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>gestion  invite </string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="gestionemission">
-     <property name="geometry">
-      <rect>
-       <x>80</x>
-       <y>230</y>
-       <width>201</width>
-       <height>28</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>gestion emission</string>
-     </property>
-    </widget>
+   </widget>
+   <widget class="QLabel" name="radiolabel">
+    <property name="geometry">
+     <rect>
+      <x>-110</x>
+      <y>30</y>
+      <width>771</width>
+      <height>311</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>771</width>
+      <height>311</height>
+     </size>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
@@ -522,7 +535,7 @@ QPushButton::focus {
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>553</width>
+     <width>608</width>
      <height>26</height>
     </rect>
    </property>

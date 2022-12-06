@@ -45,8 +45,6 @@ SOURCES += \
     gestionanimateur/gestion_animateur.cpp \
     gestionanimateur/qcustomplot.cpp \
     gestionanimateur/statistique_c.cpp \
-    invite/DuMessengerServer.cpp \
-    invite/DuMessengerSocket.cpp \
     invite/Gestion_de_invite.cpp \
     invite/dialog_stats.cpp \
     invite/exportexcelobject.cpp \
@@ -81,7 +79,6 @@ HEADERS += \
     gestionanimateur/gestion_animateur.h \
     gestionanimateur/qcustomplot.h \
     gestionanimateur/statistique_c.h \
-    invite/DuMessengerServer.h \
     invite/DuMessengerSocket.h \
     invite/Gestion_de_invite.h \
     invite/dialog_stats.h \
@@ -132,6 +129,20 @@ DISTFILES += \
     Emission/ade1218ecd6c98294857f5aa14752c77.jpg \
     Emission/c9d5e5b2061c9d651d6d84a9fa633609.jpg \
     Emission/cb9e027338e35776f778214e78bfac8c.jpg \
+    IMG8RES FOR QT/icons8-communication-unscreen.gif \
+    IMG8RES FOR QT/icons8-fingerprint-scan-unscreen.gif \
+    IMG8RES FOR QT/icons8-shield-unscreen.gif \
+    IMG8RES FOR QT/icons8-tools-unscreen.gif \
+    IMG8RES FOR QT/modifier.png \
+    IMG8RES FOR QT/on air.jpg \
+    IMG8RES FOR QT/on air.jpg \
+    IMG8RES FOR QT/onair.png \
+    IMG8RES FOR QT/print.png \
+    IMG8RES FOR QT/radio.gif \
+    IMG8RES FOR QT/stat.png \
+    IMG8RES FOR QT/stats.png \
+    IMG8RES FOR QT/trash.png \
+    IMG8RES FOR QT/valider.png \
     SMTPClient/SMTPClient.pri \
     annimateur - Copie - Copie (2)/liste.pdf \
     annimateur - Copie - Copie (2)/liste.pdf \

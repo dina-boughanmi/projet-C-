@@ -23,11 +23,7 @@
    </size>
   </property>
   <property name="windowTitle">
-   <string>On_Air</string>
-  </property>
-  <property name="windowIcon">
-   <iconset resource="imag.qrc">
-    <normaloff>:/Pictures/on air.jpg</normaloff>:/Pictures/on air.jpg</iconset>
+   <string/>
   </property>
   <property name="styleSheet">
    <string notr="true"/>
@@ -1078,14 +1074,12 @@ QPushButton::focus {
      <x>0</x>
      <y>0</y>
      <width>651</width>
-     <height>30</height>
+     <height>26</height>
     </rect>
    </property>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
- <resources>
-  <include location="imag.qrc"/>
- </resources>
+ <resources/>
  <connections/>
 </ui>

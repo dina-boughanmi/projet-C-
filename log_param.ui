@@ -15,7 +15,7 @@
   </property>
   <property name="windowIcon">
    <iconset>
-    <normaloff>../../../IMG8RES FOR QT/on air.jpg</normaloff>../../../IMG8RES FOR QT/on air.jpg</iconset>
+    <normaloff>IMG8RES FOR QT/on air.jpg</normaloff>IMG8RES FOR QT/on air.jpg</iconset>
   </property>
   <property name="styleSheet">
    <string notr="true">QWidget {

@@ -1,0 +1,18 @@
+<RCC>
+    <qresource prefix="/new/prefix1">
+        <file>on air.jpg</file>
+        <file>icons8-communication-unscreen.gif</file>
+        <file>icons8-fingerprint-scan-unscreen.gif</file>
+        <file>icons8-shield-unscreen.gif</file>
+        <file>icons8-tools-unscreen.gif</file>
+        <file>image.qrc</file>
+        <file>modifier.png</file>
+        <file>onair.png</file>
+        <file>print.png</file>
+        <file>radio.gif</file>
+        <file>stat.png</file>
+        <file>stats.png</file>
+        <file>trash.png</file>
+        <file>valider.png</file>
+    </qresource>
+</RCC>
