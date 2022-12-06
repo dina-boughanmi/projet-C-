@@ -26,6 +26,8 @@ private slots:
 
     void on_gestionemission_clicked();
 
+    void on_publisiter_clicked();
+
 private:
     Ui::menu *ui;
 };

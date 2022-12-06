@@ -78,7 +78,8 @@ void Gestion_de_invite::on_pushButton_clicked()
     int CIN=ui->lineEdit_3->text().toInt();
     int AGE=ui->lineEdit_4->text().toInt();
     int NUM_TEL=ui->lineEdit_5->text().toInt();
-    invite i(NOM,PRENOM,CIN,AGE,NUM_TEL);
+    QString RFID=ui->eeee->text();
+    invite i(NOM,PRENOM,CIN,AGE,NUM_TEL,RFID);
 
     bool test=i.ajouter();
 
@@ -135,8 +136,9 @@ void Gestion_de_invite::on_pushButton_15_clicked()
     int CIN=ui->lineEdit_mc->text().toInt();
     int AGE=ui->lineEdit_11->text().toInt();
     int NUM_TEL=ui->lineEdit_8->text().toInt();
+    QString RFID=ui->eeee->text();
 
-    invite i(NOM,PRENOM,CIN,AGE,NUM_TEL);
+    invite i(NOM,PRENOM,CIN,AGE,NUM_TEL,RFID);
 
 
 
@@ -156,7 +158,7 @@ void Gestion_de_invite::on_pushButton_15_clicked()
 
 void Gestion_de_invite::on_pushButton_16_clicked()
 {
-    QPdfWriter pdf("C:/Users/ASUS/Documents/invite/Liste.pdf");
+    QPdfWriter pdf("C:/Users/user/Documents/projet-C-/Liste.pdf");
 
                  QPainter painter(&pdf);
 
@@ -196,7 +198,7 @@ void Gestion_de_invite::on_pushButton_16_clicked()
                  int reponse = QMessageBox::question(this, "PDF généré", "Afficher le PDF ?", QMessageBox::Yes |  QMessageBox::No);
                  if (reponse == QMessageBox::Yes)
                  {
-                     QDesktopServices::openUrl(QUrl::fromLocalFile("C:/Users/ASUS/Documents/invite/Liste.pdf"));
+                     QDesktopServices::openUrl(QUrl::fromLocalFile("C:/Users/user/Documents/projet-C-/Liste.pdf"));
 
                      painter.end();
                  }
@@ -265,6 +267,7 @@ void Gestion_de_invite::on_pushButton_19_clicked()
     obj.addField(2, "CIN", "char(20)");
     obj.addField(3, "AGE", "char(20)");
     obj.addField(4, "NUM_TEL", "char(20)");
+    obj.addField(5, "RFID", "char(20)");
 
 
 

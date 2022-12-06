@@ -7161,22 +7161,6 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
          <string>Age</string>
         </property>
        </widget>
-       <widget class="QPushButton" name="update_label_linkActivated">
-        <property name="geometry">
-         <rect>
-          <x>340</x>
-          <y>100</y>
-          <width>75</width>
-          <height>23</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string notr="true"/>
-        </property>
-        <property name="text">
-         <string>arduino</string>
-        </property>
-       </widget>
       </widget>
       <widget class="QWidget" name="tab_4">
        <attribute name="title">

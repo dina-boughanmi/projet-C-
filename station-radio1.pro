@@ -144,10 +144,6 @@ DISTFILES += \
     IMG8RES FOR QT/trash.png \
     IMG8RES FOR QT/valider.png \
     SMTPClient/SMTPClient.pri \
-    annimateur - Copie - Copie (2)/liste.pdf \
-    annimateur - Copie - Copie (2)/liste.pdf \
-    annimateur - Copie - Copie (2)/liste.pdf \
-    annimateur - Copie - Copie (2)/liste.pdf \
     icons8-fingerprint-scan.gif
 
 SUBDIRS += \

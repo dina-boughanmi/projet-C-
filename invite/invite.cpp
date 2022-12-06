@@ -13,9 +13,9 @@ invite::invite()
       PRENOM=" ";
       AGE=0;
       NUM_TEL=0;
-      CHAT="";
+      RFID="";
 }
-invite::invite( QString NOM, QString PRENOM ,int CIN,int AGE , int NUM_TEL)
+invite::invite( QString NOM, QString PRENOM ,int CIN,int AGE , int NUM_TEL,QString RFID)
 {
 
     this->NOM=NOM;
@@ -23,13 +23,9 @@ invite::invite( QString NOM, QString PRENOM ,int CIN,int AGE , int NUM_TEL)
     this->CIN=CIN;
     this->AGE=AGE;
     this->NUM_TEL=NUM_TEL;
+    this->RFID=RFID;
 }
-invite::invite( QString CHAT)
-{
 
-    this->CHAT=CHAT;
-
-}
 int invite::getcin()
 {
     return CIN;
@@ -42,9 +38,9 @@ QString invite::getprenom()
 {
     return PRENOM;
 }
-QString invite::getchat()
+QString invite::getRFID()
 {
-    return CHAT;
+    return RFID;
 }
 int invite::getage()
 {
@@ -72,9 +68,9 @@ void invite::setprenom(QString PRENOM)
     this->PRENOM=PRENOM;
 
 }
-void invite::setchat(QString CHAT)
+void invite::setRFID(QString RFID)
 {
-    this->CHAT=CHAT;
+    this->RFID=RFID;
 
 }
 void invite::setage(int AGE)
@@ -100,13 +96,13 @@ bool invite::ajouter()
     QString id_string=QString::number(CIN);
     QString age_string=QString::number(AGE);
     QString numero_tel_string=QString::number(NUM_TEL);
-         query.prepare("INSERT INTO invite(NOM,PRENOM,CIN,AGE,NUM_TEL)" "VALUES (:NOM,:PRENOM,:CIN,:AGE,:NUM_TEL)");
+         query.prepare("INSERT INTO invite(NOM,PRENOM,CIN,AGE,NUM_TEL,RFID)" "VALUES (:NOM,:PRENOM,:CIN,:AGE,:NUM_TEL,:RFID)");
          query.bindValue(":NOM", NOM);
          query.bindValue(":PRENOM", PRENOM);
          query.bindValue(":CIN", id_string);
          query.bindValue(":AGE", age_string);
          query.bindValue(":NUM_TEL", numero_tel_string);
-
+         query.bindValue(":RFID", RFID);
 
                return query.exec();
 
@@ -131,11 +127,12 @@ QSqlQueryModel *invite::afficher()
     QSqlQueryModel *model=new QSqlQueryModel();
 
           model->setQuery("SELECT* FROM invite");
-          model->setHeaderData(0, Qt::Horizontal, QObject::tr("CIN"));
+          model->setHeaderData(0, Qt::Horizontal, QObject::tr("NOM"));
           model->setHeaderData(1, Qt::Horizontal, QObject::tr("PRENOM"));
-          model->setHeaderData(2, Qt::Horizontal, QObject::tr("NOM"));
-          model->setHeaderData(3, Qt::Horizontal, QObject::tr("NUM_TEL"));
-          model->setHeaderData(4, Qt::Horizontal, QObject::tr("AGE"));
+          model->setHeaderData(2, Qt::Horizontal, QObject::tr("CIN"));
+          model->setHeaderData(3, Qt::Horizontal, QObject::tr("AGE"));
+          model->setHeaderData(4, Qt::Horizontal, QObject::tr("NUM_TEL"));
+          model->setHeaderData(5, Qt::Horizontal, QObject::tr("RFID"));
 
           return  model;
 }
@@ -166,12 +163,12 @@ QSqlQueryModel * invite::tri_cin()
 {QSqlQueryModel * model= new QSqlQueryModel();
 
 model->setQuery("select * from invite order by CIN");
-model->setHeaderData(0, Qt::Horizontal, QObject::tr("CIN"));
+model->setHeaderData(0, Qt::Horizontal, QObject::tr("NOM"));
 model->setHeaderData(1, Qt::Horizontal, QObject::tr("PRENOM"));
-model->setHeaderData(2, Qt::Horizontal, QObject::tr("NOM"));
-model->setHeaderData(3, Qt::Horizontal, QObject::tr("NUM_TEL"));
-model->setHeaderData(4, Qt::Horizontal, QObject::tr("AGE"));
-
+model->setHeaderData(2, Qt::Horizontal, QObject::tr("CIN"));
+model->setHeaderData(3, Qt::Horizontal, QObject::tr("AGE"));
+model->setHeaderData(4, Qt::Horizontal, QObject::tr("NUM_TEL"));
+model->setHeaderData(5, Qt::Horizontal, QObject::tr("RFID"));
     return model;
 }
 
@@ -180,12 +177,12 @@ QSqlQueryModel * invite::tri_nom()
 {QSqlQueryModel * model= new QSqlQueryModel();
 
 model->setQuery("select * from invite order by NOM");
-model->setHeaderData(0, Qt::Horizontal, QObject::tr("CIN"));
+model->setHeaderData(0, Qt::Horizontal, QObject::tr("NOM"));
 model->setHeaderData(1, Qt::Horizontal, QObject::tr("PRENOM"));
-model->setHeaderData(2, Qt::Horizontal, QObject::tr("NOM"));
-model->setHeaderData(3, Qt::Horizontal, QObject::tr("NUM_TEL"));
-model->setHeaderData(4, Qt::Horizontal, QObject::tr("AGE"));
-
+model->setHeaderData(2, Qt::Horizontal, QObject::tr("CIN"));
+model->setHeaderData(3, Qt::Horizontal, QObject::tr("AGE"));
+model->setHeaderData(4, Qt::Horizontal, QObject::tr("NUM_TEL"));
+model->setHeaderData(5, Qt::Horizontal, QObject::tr("RFID"));
     return model;
 }
 
@@ -196,12 +193,12 @@ QSqlQueryModel * invite::tri_age()
 {QSqlQueryModel * model= new QSqlQueryModel();
 
 model->setQuery("select * from invite order by AGE");
-model->setHeaderData(0, Qt::Horizontal, QObject::tr("CIN"));
+model->setHeaderData(0, Qt::Horizontal, QObject::tr("NOM"));
 model->setHeaderData(1, Qt::Horizontal, QObject::tr("PRENOM"));
-model->setHeaderData(2, Qt::Horizontal, QObject::tr("NOM"));
-model->setHeaderData(3, Qt::Horizontal, QObject::tr("NUM_TEL"));
-model->setHeaderData(4, Qt::Horizontal, QObject::tr("AGE"));
-
+model->setHeaderData(2, Qt::Horizontal, QObject::tr("CIN"));
+model->setHeaderData(3, Qt::Horizontal, QObject::tr("AGE"));
+model->setHeaderData(4, Qt::Horizontal, QObject::tr("NUM_TEL"));
+model->setHeaderData(5, Qt::Horizontal, QObject::tr("RFID"));
     return model;
 }
 void invite::chercheID(QTableView *table, int CIN)
@@ -226,22 +223,7 @@ void invite::clearTable(QTableView *table)
     table->setModel(model);
 }
 
-bool invite::chatbox()
-{
 
-
-    QSqlQuery query;
-
-         query.prepare("INSERT INTO chatbox(CHAT)" "VALUES (:CHAT)");
-         query.bindValue(":CHAT", CHAT);
-
-
-
-
-               return query.exec();
-
-
-}
 QSqlQueryModel *invite::afficherc()
 {
     QSqlQueryModel *model=new QSqlQueryModel();

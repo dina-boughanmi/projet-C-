@@ -17,20 +17,20 @@ class invite
 public:
     invite();
 
-        invite(QString,QString,int,int,int);
+        invite(QString,QString,int,int,int,QString);
         invite(QString);
 
         int getcin();
         QString getnom();
         QString getprenom();
-        QString getchat();
+        QString getRFID();
         int getage();
         int getnumero_tel();
 
 
         void setcin(int);
         void setnom(QString);
-        void setchat(QString);
+        void setRFID(QString);
         void setprenom(QString);
         void setage(int);
         void setnumero_tel(int);
@@ -52,7 +52,7 @@ bool chatbox();
 
         QString NOM;
         QString PRENOM;
-          QString CHAT;
+          QString RFID;
         int CIN;
         int AGE;
         int NUM_TEL;
