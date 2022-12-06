@@ -1,4 +1,12 @@
 QT       += core gui sql
+QT+=charts
+QT += multimedia
+QT += multimediawidgets
+QT += printsupport
+QT       += core gui serialport multimedia multimediawidgets
+
+QT +=network
+QT +=svg
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -16,12 +24,14 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    arduino.cpp \
     connexion.cpp \
     main.cpp \
     mainwindow.cpp \
     publicite1.cpp
 
 HEADERS += \
+    arduino.h \
     connexion.h \
     mainwindow.h \
     publicite1.h
@@ -42,3 +52,5 @@ RESOURCES += \
 
 DISTFILES += \
     image/256435690_413123583782544_8328845905630176541_n.jpg
+
+QT+=serialport

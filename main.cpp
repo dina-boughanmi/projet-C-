@@ -10,6 +10,12 @@ int main(int argc, char *argv[])
     connexion c;
     bool test=c.createconnection();
     MainWindow w;
+
+
+    w.setWindowTitle("Temperature Sensor Reading");
+        //w.setFixedSize(400,112);
+        w.show();
+
     if (test)
     {
         w.show();
