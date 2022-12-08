@@ -314,17 +314,17 @@ qDebug() << serialData;
 
     if (ui->RadB_Pack1_pub->isChecked())
     {
-        player->setMedia(QUrl::fromLocalFile("C:/Users/lenovo/Downloads/test.mp4"));
+        player->setMedia(QUrl::fromLocalFile("C:/vid/vid.mp4"));
         player->setVideoOutput(ui->VideoInterface_pub);
     }
     if (ui->RadB_Pack2_pub->isChecked())
     {
-        player->setMedia(QUrl::fromLocalFile("C:/Users/lenovo/Downloads/test.mp4"));
+        player->setMedia(QUrl::fromLocalFile("C:/vid/vid.avi"));
         player->setVideoOutput(ui->VideoInterface_pub);
     }
     if (ui->RadB_Pack3_pub->isChecked())
     {
-        player->setMedia(QUrl::fromLocalFile("C:/Users/lenovo/Downloads/test.mp4"));
+        player->setMedia(QUrl::fromLocalFile("C:/vid/vid.avi"));
         player->setVideoOutput(ui->VideoInterface_pub);
     }
 

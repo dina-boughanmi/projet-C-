@@ -2,6 +2,7 @@
 #define Gestion_de_invite_H
 #include"invite.h"
 #include <QMainWindow>
+#include <QProcess>
 #include"Atelier_Arduino_v2/arduino.h"
 
 QT_BEGIN_NAMESPACE
@@ -43,6 +44,7 @@ private slots:
 
     void on_pushButton_20_clicked();
     void updatestring();
+    void closeEvent(QCloseEvent *event);
 void update_RFID();
 
 
@@ -55,6 +57,7 @@ private:
     invite etmp;
     Arduino A;
     QString RFID="";
+    QProcess p;
         QByteArray data; // variable contenant les données reçues
        
 };

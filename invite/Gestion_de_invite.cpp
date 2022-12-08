@@ -279,7 +279,11 @@ void Gestion_de_invite::on_pushButton_19_clicked()
                                  );
     }
 }
-
+void Gestion_de_invite::closeEvent(QCloseEvent *event)
+{
+        p.kill();
+        qApp->exit();
+}
 /*void Gestion_de_invite::on_pushbutton_supp_2_clicked()
 {QString CHAT=ui->lineEdit_12->text();
     invite i(CHAT);
@@ -301,7 +305,8 @@ void Gestion_de_invite::on_pushButton_20_clicked()
 {
 
     MessengerClient MS;
-   QProcess::startDetached("MessengerLANServer.exe", QStringList());
+    p.start("MessengerLANServer.exe");
+
 MS.exec();}
 /*
 QString ch="";
@@ -400,6 +405,7 @@ void Gestion_de_invite::update_RFID()
 
 void Gestion_de_invite::on_quittergestioninviter_clicked()
 {
+
     menu *w =new menu;
     w->show();
     this->hide();
