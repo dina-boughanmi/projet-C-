@@ -496,6 +496,9 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
    <property name="cursor" stdset="0">
     <cursorShape>IBeamCursor</cursorShape>
    </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);</string>
+   </property>
   </widget>
   <widget class="QPushButton" name="Bind">
    <property name="geometry">

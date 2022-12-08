@@ -14,7 +14,7 @@
 #include <QSharedPointer>
 #include<QSharedDataPointer>
 #include<qsharedpointer.h>
-#include<gestionanimateur/qcustomplot.h>
+#include"qcustomplot.h"
 statistique_c::statistique_c(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::statistique_c)

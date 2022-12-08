@@ -2,7 +2,7 @@
 #include "ui_dialog_stats.h"
 #include "invite.h"
 
-#include"gestionanimateur/qcustomplot.h"
+#include"qcustomplot.h"
 #include "Gestion_de_invite.h"
 
 Dialog_stats::Dialog_stats(QWidget *parent) :

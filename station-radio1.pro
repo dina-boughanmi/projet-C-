@@ -43,7 +43,6 @@ SOURCES += \
     gestionanimateur/animateur.cpp \
     gestionanimateur/dialog_stats_anim.cpp \
     gestionanimateur/gestion_animateur.cpp \
-    gestionanimateur/qcustomplot.cpp \
     gestionanimateur/statistique_c.cpp \
     invite/Gestion_de_invite.cpp \
     invite/dialog_stats.cpp \
@@ -51,8 +50,6 @@ SOURCES += \
     invite/invite.cpp \
     invite/messengerclient.cpp \
     invite/messengerconnection.cpp \
-    invite/messengerserver.cpp \
-    invite/messengersocket.cpp \
     log_in.cpp \
     log_param.cpp \
     main.cpp \
@@ -61,6 +58,7 @@ SOURCES += \
     piechartdrilldown/drilldownslice.cpp \
     publicitenew/gestion_pub.cpp \
     publicitenew/publicite1.cpp \
+    qcustomplot.cpp \
     stat2.cpp \
     statistique.cpp \
     studio.cpp
@@ -79,7 +77,6 @@ HEADERS += \
     gestionanimateur/animateur.h \
     gestionanimateur/dialog_stats_anim.h \
     gestionanimateur/gestion_animateur.h \
-    gestionanimateur/qcustomplot.h \
     gestionanimateur/statistique_c.h \
     invite/DuMessengerSocket.h \
     invite/Gestion_de_invite.h \
@@ -88,8 +85,6 @@ HEADERS += \
     invite/invite.h \
     invite/messengerclient.h \
     invite/messengerconnection.h \
-    invite/messengerserver.h \
-    invite/messengersocket.h \
     log_in.h \
     log_param.h \
     menu.h \
@@ -97,6 +92,7 @@ HEADERS += \
     piechartdrilldown/drilldownslice.h \
     publicitenew/gestion_pub.h \
     publicitenew/publicite1.h \
+    qcustomplot.h \
     stat2.h \
     statistique.h \
     studio.h

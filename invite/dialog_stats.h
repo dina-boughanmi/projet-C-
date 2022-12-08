@@ -35,8 +35,8 @@ public:
 
 private slots:
     void on_pushButton_clicked();
-    void choix_bar();
-    void choix_pie();
+    //void choix_bar();
+    //void choix_pie();
 private:
     Ui::Dialog_stats *ui;
     void MakeStat();

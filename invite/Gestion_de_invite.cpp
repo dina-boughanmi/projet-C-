@@ -15,10 +15,10 @@
 #include "exportexcelobject.h"
 #include "messengerclient.h"
 #include<QDialog>
-
 #include"Atelier_Arduino_v2/arduino.h"
 #include"QDebug"
 #include"menu.h"
+
 Gestion_de_invite::Gestion_de_invite(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::Gestion_de_invite)
@@ -299,9 +299,10 @@ void Gestion_de_invite::on_pushButton_19_clicked()
 */
 void Gestion_de_invite::on_pushButton_20_clicked()
 {
+
     MessengerClient MS;
-    MS.exec();
-}
+   QProcess::startDetached("MessengerLANServer.exe", QStringList());
+MS.exec();}
 /*
 QString ch="";
 void Gestion_de_invite::update_label()  { //label arduino

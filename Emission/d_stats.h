@@ -33,7 +33,7 @@ public:
     ~D_stats();
 
     QChartView *chartView ;
-    void choix_bar();
+    //void choix_bar();
     void choix_pie();
 
 private:
