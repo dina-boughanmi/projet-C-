@@ -284,23 +284,7 @@ void Gestion_de_invite::closeEvent(QCloseEvent *event)
         p.kill();
         qApp->exit();
 }
-/*void Gestion_de_invite::on_pushbutton_supp_2_clicked()
-{QString CHAT=ui->lineEdit_12->text();
-    invite i(CHAT);
- bool test=i.chatbox();
- if (test)
- { ui->listView->setModel(etmp.afficherc());
- QMessageBox::information(nullptr,QObject::tr("ok"),QObject::tr("send effectue\n ""click cancel"),QMessageBox::Cancel);
 
- }
- else
- {QMessageBox::critical(nullptr,QObject::tr("not ok"),QObject::tr("erreur \n""click to cancel"),QMessageBox::Cancel);}
-
-
-
-
-}
-*/
 void Gestion_de_invite::on_pushButton_20_clicked()
 {
 
@@ -308,57 +292,7 @@ void Gestion_de_invite::on_pushButton_20_clicked()
     p.start("MessengerLANServer.exe");
 
 MS.exec();}
-/*
-QString ch="";
-void Gestion_de_invite::update_label()  { //label arduino
 
-    QSqlQuery query;
-     QByteArray data="";
-     QString mdp="";
-
-    data=A.read_from_arduino();
-
-     qDebug() <<  " data is " <<*data;
-     if(ch.length()<11)
-
-
-   {  ch=ch+data;}
-     qDebug() <<  " ch is " <<ch;
-
-
-    if(ch!="")
-       {
-        query.prepare("select * from invite where password='"+ch+"'");
-        if(query.exec())
-        {mdp=ch;
-           ui->eeee->setText(ch);
-
-         QString message ="Bienvenue ";
-         QByteArray br = message.toUtf8();
-         A.write_to_arduino(br);
-         if(ch.length()==12)
-         {
-         ch=""; }
-         }
-        else
-        {
-            QString message ="donne inaccessible";
-            QByteArray br = message.toUtf8();
-            A.write_to_arduino(br);
-            QMessageBox::critical(nullptr,QObject::tr("login failed"),
-                                    QObject::tr("FAILED TO connected ..........  \n"
-                                                 "acces denied \n"
-
-                                                "Click Cancel to exit."),QMessageBox::Cancel);
-        }
-
-       }
-
-   if(ch.length()>10)
-     {
-     ch="";
-     }
-*/
 void Gestion_de_invite::update_RFID()
 { 
     QSqlQuery query;

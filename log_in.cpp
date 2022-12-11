@@ -22,28 +22,19 @@ log_in::log_in(QWidget *parent) :
        break;
     case(-1):qDebug() << "arduino is not available";
     }
-     QObject::connect(A.getserial(),SIGNAL(readyRead()),this,SLOT(update_label())); // permet de lancer
+     //QObject::connect(A.getserial(),SIGNAL(readyRead()),this,SLOT(update_label())); // permet de lancer
      //le slot update_label suite à la reception du signal readyRead (reception des données).
-
-
-
-
-
     //DAate systeme
         QDateTime Date_p=QDateTime::currentDateTime();
         QString Date_txt=Date_p.toString("dddd dd MMMM yyyy");
         ui->label_date->setText(Date_txt);
     //gif
-
         QMovie* movie = new QMovie("C:/Users/user/Desktop/IMG8RES FOR QT/icons8-fingerprint-scan-unscreen.gif");
-
-
     if (!movie->isValid())
     {
 
         qDebug()<<"not valed gif";
     }
-
     // Play GIF
     QLabel *label_gif= ui->label_gif;
    label_gif->setMovie(movie);
@@ -76,7 +67,7 @@ void log_in::on_pushButton_clicked()
 
      w->show();
      //this->destroy();
-     this->hide();
+     this->close();
    }else
    {   trys++;
        int re=3-trys;

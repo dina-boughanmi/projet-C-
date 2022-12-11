@@ -63,8 +63,6 @@ private slots:
 
     void on_checkBox_3_stateChanged(int arg1);
 
-    void on_checkBox_2_stateChanged(int arg2);
-
     void on_checkBox_stateChanged(int arg3);
 
     void on_pushButton_clicked();
@@ -75,14 +73,12 @@ private slots:
 
     void on_pushButton_29_clicked();
 
-    void on_pushButton_stat2_clicked();
+
 
     void on_quitter_pushbottn_clicked();
 
 private:
      Email createEmail();
-
-
 private:
 
     Ui::Gestion_Studio *ui;

@@ -315,14 +315,6 @@ void Gestion_Studio::on_checkBox_3_stateChanged(int arg1)//tri
    }
 }
 
-void Gestion_Studio::on_checkBox_2_stateChanged(int arg2)//tri
-{
-    //afficher  desendeant id station
-    if (arg2){}
-    //ui->tableView_2->setModel(STUDIO.afficherdown_id_station());}
-
-}
-
 void Gestion_Studio::on_checkBox_stateChanged(int arg3)//tri
 {
     //afficher desendent par capasite
@@ -387,11 +379,6 @@ void Gestion_Studio::on_pushButton_29_clicked()
      {   QMessageBox::critical(nullptr, QObject::tr("suppresstion failed "),
                     QObject::tr("connection failed :.\n"
                                 "Click Cancel to exit."), QMessageBox::Cancel);}
-}
-
-void Gestion_Studio::on_pushButton_stat2_clicked()
-{
- stat2();
 }
 
 void Gestion_Studio::on_quitter_pushbottn_clicked()
