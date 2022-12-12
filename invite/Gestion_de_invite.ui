@@ -487,15 +487,15 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
      <rect>
       <x>30</x>
       <y>30</y>
-      <width>611</width>
-      <height>451</height>
+      <width>600</width>
+      <height>470</height>
      </rect>
     </property>
     <property name="styleSheet">
      <string notr="true"/>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>1</number>
     </property>
     <widget class="QWidget" name="tab">
      <attribute name="title">

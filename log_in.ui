@@ -603,6 +603,9 @@ background-color: rgb(255, 255, 255);</string>
         <property name="text">
          <string>ok</string>
         </property>
+        <property name="shortcut">
+         <string>Return</string>
+        </property>
        </widget>
       </item>
      </layout>
@@ -611,9 +614,9 @@ background-color: rgb(255, 255, 255);</string>
    <widget class="QPushButton" name="pushButton_2">
     <property name="geometry">
      <rect>
-      <x>200</x>
+      <x>165</x>
       <y>480</y>
-      <width>170</width>
+      <width>210</width>
       <height>28</height>
      </rect>
     </property>
