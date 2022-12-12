@@ -35,6 +35,7 @@
 #include <QMessageBox>
 #include <QLCDNumber>
 #include"menu.h"
+#include"Atelier_Arduino_v2/arduino.h"
 gestion_pub::gestion_pub(QWidget *parent)
     : QMainWindow(parent)
      , ui(new Ui::gestion_pub)
@@ -93,8 +94,19 @@ gestion_pub::gestion_pub(QWidget *parent)
     ui->lineEdit_2_pub->setInputMask("AAAAAAAAAAAAAAAAAAAAAAA");
     ui->lineEdit_pub->setInputMask("AAAAAAAAAAAAAAAAAAAAAAA");
     ui->linda_pub->setModel(Etmp.afficher());
-    ui->tab_ga_pub->setModel(Etmp.afficher_inv());
+    ui->tab_ga_pub->setModel(Etmp.afficher_inv());//pubgif
+    //gif
+        QMovie* movie = new QMovie("C:/Users/user/Documents/projet-C-/IMG8RES FOR QT/icons8-profit-unscreen.gif");
+    if (!movie->isValid())
+    {
 
+        qDebug()<<"not valed gif";
+    }
+    // Play GIF
+    QLabel *label_gif= ui->pubgif;
+   label_gif->setMovie(movie);
+    movie->start();
+     qDebug()<<"valed gif selket ";
 }
 
 gestion_pub::~gestion_pub()
@@ -408,4 +420,5 @@ void gestion_pub::on_pushButton_clicked()
     menu *w =new menu;
     w->show();
     this->hide();
+    A1.close_arduino();
 }

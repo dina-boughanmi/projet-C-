@@ -503,7 +503,7 @@ QPushButton::focus {
       <item>
        <widget class="QPushButton" name="publisiter">
         <property name="text">
-         <string>Gestion publiciter</string>
+         <string>Gestion publicité</string>
         </property>
        </widget>
       </item>

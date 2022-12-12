@@ -119,6 +119,8 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 RC_ICONS = on-air.ico
 RESOURCES += \
+    IMG8RES FOR QT/image.qrc \
+    image/image2.qrc \
     invite/resource.qrc
 
 DISTFILES += \
@@ -130,22 +132,66 @@ DISTFILES += \
     Emission/ade1218ecd6c98294857f5aa14752c77.jpg \
     Emission/c9d5e5b2061c9d651d6d84a9fa633609.jpg \
     Emission/cb9e027338e35776f778214e78bfac8c.jpg \
+    IMG8RES FOR QT/bar-chart.gif \
+    IMG8RES FOR QT/icons8-communication-unscreen.gif \
     IMG8RES FOR QT/icons8-communication-unscreen.gif \
     IMG8RES FOR QT/icons8-fingerprint-scan-unscreen.gif \
+    IMG8RES FOR QT/icons8-fingerprint-scan-unscreen.gif \
+    IMG8RES FOR QT/icons8-private-wall-mount-camera-50.png \
+    IMG8RES FOR QT/icons8-profit-unscreen.gif \
     IMG8RES FOR QT/icons8-shield-unscreen.gif \
+    IMG8RES FOR QT/icons8-shield-unscreen.gif \
+    IMG8RES FOR QT/icons8-speech-bubble-unscreen.gif \
     IMG8RES FOR QT/icons8-tools-unscreen.gif \
+    IMG8RES FOR QT/icons8-tools-unscreen.gif \
+    IMG8RES FOR QT/icons8-wall-mount-camera-error-50.png \
+    IMG8RES FOR QT/modifier.png \
     IMG8RES FOR QT/modifier.png \
     IMG8RES FOR QT/on air.jpg \
     IMG8RES FOR QT/on air.jpg \
+    IMG8RES FOR QT/on air.jpg \
     IMG8RES FOR QT/onair.png \
+    IMG8RES FOR QT/onair.png \
+    IMG8RES FOR QT/planner.gif \
     IMG8RES FOR QT/print.png \
+    IMG8RES FOR QT/print.png \
+    IMG8RES FOR QT/qr-code.gif \
+    IMG8RES FOR QT/radio.gif \
     IMG8RES FOR QT/radio.gif \
     IMG8RES FOR QT/stat.png \
+    IMG8RES FOR QT/stat.png \
     IMG8RES FOR QT/stats.png \
+    IMG8RES FOR QT/stats.png \
+    IMG8RES FOR QT/support-unscreen.gif \
+    IMG8RES FOR QT/timeline.gif \
+    IMG8RES FOR QT/trash.png \
     IMG8RES FOR QT/trash.png \
     IMG8RES FOR QT/valider.png \
+    IMG8RES FOR QT/valider.png \
     SMTPClient/SMTPClient.pri \
-    icons8-fingerprint-scan.gif
+    icons8-fingerprint-scan.gif \
+    image/bar-chart.gif \
+    image/icons8-communication-unscreen.gif \
+    image/icons8-fingerprint-scan-unscreen.gif \
+    image/icons8-private-wall-mount-camera-50.png \
+    image/icons8-profit-unscreen.gif \
+    image/icons8-shield-unscreen.gif \
+    image/icons8-speech-bubble-unscreen.gif \
+    image/icons8-tools-unscreen.gif \
+    image/icons8-wall-mount-camera-error-50.png \
+    image/modifier.png \
+    image/on air.jpg \
+    image/onair.png \
+    image/planner.gif \
+    image/print.png \
+    image/qr-code.gif \
+    image/radio.gif \
+    image/stat.png \
+    image/stats.png \
+    image/support-unscreen.gif \
+    image/timeline.gif \
+    image/trash.png \
+    image/valider.png
 
 SUBDIRS += \
     annimateur - Copie - Copie (2)/annimateur.pro \

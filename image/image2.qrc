@@ -1,0 +1,26 @@
+<RCC>
+    <qresource prefix="/new/prefix1">
+        <file>bar-chart.gif</file>
+        <file>icons8-communication-unscreen.gif</file>
+        <file>icons8-fingerprint-scan-unscreen.gif</file>
+        <file>icons8-private-wall-mount-camera-50.png</file>
+        <file>icons8-profit-unscreen.gif</file>
+        <file>icons8-shield-unscreen.gif</file>
+        <file>icons8-speech-bubble-unscreen.gif</file>
+        <file>icons8-tools-unscreen.gif</file>
+        <file>icons8-wall-mount-camera-error-50.png</file>
+        <file>modifier.png</file>
+        <file>on air.jpg</file>
+        <file>onair.png</file>
+        <file>planner.gif</file>
+        <file>print.png</file>
+        <file>qr-code.gif</file>
+        <file>radio.gif</file>
+        <file>stat.png</file>
+        <file>stats.png</file>
+        <file>support-unscreen.gif</file>
+        <file>timeline.gif</file>
+        <file>trash.png</file>
+        <file>valider.png</file>
+    </qresource>
+</RCC>

@@ -40,6 +40,34 @@ Gestion_animateur::Gestion_animateur(QWidget *parent)
 
     ui->lineEdit_id->setValidator(new QIntValidator(0, 999999, this));
     ui->tab_animateur->setModel(A.afficher());
+
+
+
+    //gif
+        QMovie* movie = new QMovie("C:/Users/user/Documents/projet-C-/IMG8RES FOR QT/support-unscreen.gif");
+    if (!movie->isValid())
+    {
+
+        qDebug()<<"not valed gif";
+    }
+    // Play GIFplantgif
+    QLabel *label_gif= ui->animateurgif;
+   label_gif->setMovie(movie);
+    movie->start();
+     qDebug()<<"valed gif selket ";
+
+     //gif
+         QMovie* mov = new QMovie("C:/Users/user/Documents/projet-C-/IMG8RES FOR QT/planner.gif");
+     if (!movie->isValid())
+     {
+
+         qDebug()<<"not valed gif";
+     }
+     // Play GIFplantgif
+     QLabel *label_gi= ui->plantgif;
+    label_gi->setMovie(mov);
+     mov->start();
+      qDebug()<<"valed gif selket ";
 }
 
 Gestion_animateur::~Gestion_animateur()
@@ -272,5 +300,6 @@ void Gestion_animateur::on_quitter_pushbottn_clicked()
     menu *w =new menu;
     w->show();
     this->hide();
+    A1.close_arduino();
 }
 

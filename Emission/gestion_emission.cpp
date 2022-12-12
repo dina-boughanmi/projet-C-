@@ -41,6 +41,18 @@ Gestion_emission::Gestion_emission(QWidget *parent) :
      case(-1):qDebug() <<"arduino is not available " ;
      }
      QObject ::connect(A.getserial(), SIGNAL (readyRead()) ,this,SLOT(update_label()));
+     //gif
+         QMovie* movie = new QMovie("C:/Users/user/Documents/projet-C-/IMG8RES FOR QT/qr-code.gif");
+     if (!movie->isValid())
+     {
+
+         qDebug()<<"not valed gif";
+     }
+     // Play GIF
+     QLabel *label_gif= ui->qrccode_label;
+    label_gif->setMovie(movie);
+     movie->start();
+      qDebug()<<"valed gif selket ";
 }
 
 void Gestion_emission::updatestring(){}

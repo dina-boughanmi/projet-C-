@@ -40,8 +40,16 @@ log_in::log_in(QWidget *parent) :
    label_gif->setMovie(movie);
     movie->start();
      qDebug()<<"valed gif selket ";
-}
 
+
+}
+int modes=1;
+void log_in::on_Login_check_PassShowHide_clicked()
+{
+    if(modes==1){
+        ui->lineEdit_loginpwd->setEchoMode(QLineEdit::Normal);modes=0;}
+    else{ui->lineEdit_loginpwd->setEchoMode(QLineEdit::Password);modes=1;}
+}
 log_in::~log_in()
 {
     delete ui;

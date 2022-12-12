@@ -43,9 +43,20 @@ Gestion_de_invite::Gestion_de_invite(QWidget *parent)
          break ;
      case(-1):qDebug() <<"arduino is not available " ;
      }
-     QObject ::connect(A.getserial(), SIGNAL (readyRead()) ,this,SLOT(update_RFID()));
+     QObject ::connect(A.getserial(), SIGNAL (readyRead()) ,this,SLOT(update_RFID()));//intitegif
 
+     //gif
+         QMovie* movie = new QMovie("C:/Users/user/Documents/projet-C-/IMG8RES FOR QT/icons8-speech-bubble-unscreen.gif");
+     if (!movie->isValid())
+     {
 
+         qDebug()<<"not valed gif";
+     }
+     // Play GIF
+     QLabel *label_gif= ui->intitegif;
+    label_gif->setMovie(movie);
+     movie->start();
+      qDebug()<<"valed gif selket ";
 }
 void Gestion_de_invite::updatestring(){
 
@@ -343,5 +354,5 @@ void Gestion_de_invite::on_quittergestioninviter_clicked()
     menu *w =new menu;
     w->show();
     this->hide();
-
+ A.close_arduino();
 }

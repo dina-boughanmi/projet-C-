@@ -960,7 +960,7 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
 }</string>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>1</number>
     </property>
     <widget class="QWidget" name="tab">
      <attribute name="title">
@@ -1182,7 +1182,7 @@ font: 8pt &quot;MS Shell Dlg 2&quot;;
         <rect>
          <x>20</x>
          <y>20</y>
-         <width>601</width>
+         <width>581</width>
          <height>271</height>
         </rect>
        </property>
@@ -1190,8 +1190,8 @@ font: 8pt &quot;MS Shell Dlg 2&quot;;
       <widget class="QPushButton" name="pb_Ajouter_2">
        <property name="geometry">
         <rect>
-         <x>690</x>
-         <y>60</y>
+         <x>150</x>
+         <y>340</y>
          <width>111</width>
          <height>23</height>
         </rect>
@@ -1203,8 +1203,8 @@ font: 8pt &quot;MS Shell Dlg 2&quot;;
       <widget class="QPushButton" name="pb_Ajouter_3">
        <property name="geometry">
         <rect>
-         <x>690</x>
-         <y>30</y>
+         <x>150</x>
+         <y>310</y>
          <width>111</width>
          <height>23</height>
         </rect>
@@ -1216,8 +1216,8 @@ font: 8pt &quot;MS Shell Dlg 2&quot;;
       <widget class="QPushButton" name="pb_Ajouter_4">
        <property name="geometry">
         <rect>
-         <x>690</x>
-         <y>90</y>
+         <x>150</x>
+         <y>370</y>
          <width>111</width>
          <height>23</height>
         </rect>
@@ -1271,8 +1271,8 @@ font: 8pt &quot;MS Shell Dlg 2&quot;;
       <widget class="QPushButton" name="pb_Ajouter_6">
        <property name="geometry">
         <rect>
-         <x>690</x>
-         <y>120</y>
+         <x>26</x>
+         <y>310</y>
          <width>111</width>
          <height>23</height>
         </rect>
@@ -1284,8 +1284,8 @@ font: 8pt &quot;MS Shell Dlg 2&quot;;
       <widget class="QPushButton" name="pb_stats">
        <property name="geometry">
         <rect>
-         <x>690</x>
-         <y>150</y>
+         <x>26</x>
+         <y>340</y>
          <width>111</width>
          <height>23</height>
         </rect>
@@ -1297,8 +1297,8 @@ font: 8pt &quot;MS Shell Dlg 2&quot;;
       <widget class="QPushButton" name="qrcode">
        <property name="geometry">
         <rect>
-         <x>690</x>
-         <y>390</y>
+         <x>670</x>
+         <y>50</y>
          <width>111</width>
          <height>23</height>
         </rect>
@@ -1324,7 +1324,7 @@ font: 8pt &quot;MS Shell Dlg 2&quot;;
        <property name="geometry">
         <rect>
          <x>690</x>
-         <y>430</y>
+         <y>410</y>
          <width>111</width>
          <height>23</height>
         </rect>
@@ -1336,9 +1336,9 @@ font: 8pt &quot;MS Shell Dlg 2&quot;;
       <widget class="QLabel" name="imagee">
        <property name="geometry">
         <rect>
-         <x>380</x>
+         <x>350</x>
          <y>310</y>
-         <width>251</width>
+         <width>321</width>
          <height>161</height>
         </rect>
        </property>
@@ -1349,8 +1349,8 @@ font: 8pt &quot;MS Shell Dlg 2&quot;;
       <widget class="QPushButton" name="update_label_linkActivated">
        <property name="geometry">
         <rect>
-         <x>694</x>
-         <y>180</y>
+         <x>30</x>
+         <y>370</y>
          <width>101</width>
          <height>23</height>
         </rect>
@@ -1366,6 +1366,19 @@ font: 8pt &quot;MS Shell Dlg 2&quot;;
          <y>240</y>
          <width>211</width>
          <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QLabel" name="qrccode_label">
+       <property name="geometry">
+        <rect>
+         <x>620</x>
+         <y>110</y>
+         <width>201</width>
+         <height>201</height>
         </rect>
        </property>
        <property name="text">
