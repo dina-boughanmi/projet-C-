@@ -66,6 +66,7 @@ void log_in::on_pushButton_clicked()
                          "Click Cancel to exit."), QMessageBox::Cancel);
 
      w->show();
+     A.close_arduino();
      //this->destroy();
      this->close();
    }else
