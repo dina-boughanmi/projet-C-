@@ -960,7 +960,7 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
 }</string>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>1</number>
     </property>
     <widget class="QWidget" name="tab">
      <attribute name="title">
@@ -1118,6 +1118,10 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
       <property name="text">
        <string>supprimer</string>
       </property>
+      <property name="icon">
+       <iconset resource="../image/image2.qrc">
+        <normaloff>:/new/prefix1/trash.png</normaloff>:/new/prefix1/trash.png</iconset>
+      </property>
      </widget>
      <widget class="QPushButton" name="tri">
       <property name="geometry">
@@ -1143,6 +1147,10 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
       </property>
       <property name="text">
        <string>modifier</string>
+      </property>
+      <property name="icon">
+       <iconset resource="../image/image2.qrc">
+        <normaloff>:/new/prefix1/modifier.png</normaloff>:/new/prefix1/modifier.png</iconset>
       </property>
      </widget>
      <widget class="QLabel" name="label_3">
@@ -1200,34 +1208,21 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
      <widget class="QPushButton" name="pdf">
       <property name="geometry">
        <rect>
-        <x>1090</x>
+        <x>1040</x>
         <y>30</y>
-        <width>41</width>
-        <height>41</height>
+        <width>111</width>
+        <height>30</height>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 255);</string>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-      <property name="icon">
-       <iconset>
-        <normaloff>../vecteezy_download-pdf-icon-template-black-color-editable-download_6692987.jpg</normaloff>../vecteezy_download-pdf-icon-template-black-color-editable-download_6692987.jpg</iconset>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_5">
-      <property name="geometry">
-       <rect>
-        <x>1100</x>
-        <y>10</y>
-        <width>31</width>
-        <height>20</height>
-       </rect>
+       <string notr="true"/>
       </property>
       <property name="text">
        <string>PDF</string>
+      </property>
+      <property name="icon">
+       <iconset resource="../image/image2.qrc">
+        <normaloff>:/new/prefix1/print.png</normaloff>:/new/prefix1/print.png</iconset>
       </property>
      </widget>
      <widget class="QLabel" name="label_6">
@@ -1293,6 +1288,10 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
       </property>
       <property name="text">
        <string>statistique</string>
+      </property>
+      <property name="icon">
+       <iconset resource="../image/image2.qrc">
+        <normaloff>:/new/prefix1/stat.png</normaloff>:/new/prefix1/stat.png</iconset>
       </property>
      </widget>
      <widget class="QLabel" name="label_12">
@@ -1508,6 +1507,8 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
- <resources/>
+ <resources>
+  <include location="../image/image2.qrc"/>
+ </resources>
  <connections/>
 </ui>
