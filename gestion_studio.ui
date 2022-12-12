@@ -544,7 +544,7 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
       <string notr="true"/>
      </property>
      <property name="currentIndex">
-      <number>2</number>
+      <number>0</number>
      </property>
      <widget class="QWidget" name="tab_4">
       <attribute name="title">
@@ -613,6 +613,10 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
           <property name="text">
            <string>ok</string>
           </property>
+          <property name="icon">
+           <iconset resource="image/image2.qrc">
+            <normaloff>:/new/prefix1/valider.png</normaloff>:/new/prefix1/valider.png</iconset>
+          </property>
          </widget>
         </item>
        </layout>
@@ -656,6 +660,10 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
          <widget class="QPushButton" name="pushButton_29">
           <property name="text">
            <string>ok</string>
+          </property>
+          <property name="icon">
+           <iconset resource="image/image2.qrc">
+            <normaloff>:/new/prefix1/trash.png</normaloff>:/new/prefix1/trash.png</iconset>
           </property>
          </widget>
         </item>
@@ -731,6 +739,10 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
          <widget class="QPushButton" name="modiferbotton">
           <property name="text">
            <string>ok</string>
+          </property>
+          <property name="icon">
+           <iconset resource="image/image2.qrc">
+            <normaloff>:/new/prefix1/modifier.png</normaloff>:/new/prefix1/modifier.png</iconset>
           </property>
          </widget>
         </item>
@@ -1184,19 +1196,22 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
              <string>save as pdf </string>
             </property>
             <property name="icon">
-             <iconset>
-              <normaloff>../../IMG8RES FOR QT/print.png</normaloff>../../IMG8RES FOR QT/print.png</iconset>
+             <iconset resource="image/image2.qrc">
+              <normaloff>:/new/prefix1/print.png</normaloff>:/new/prefix1/print.png</iconset>
             </property>
            </widget>
           </item>
           <item>
            <widget class="QPushButton" name="pushButton_4">
+            <property name="autoFillBackground">
+             <bool>false</bool>
+            </property>
             <property name="text">
              <string>statistique top 5</string>
             </property>
             <property name="icon">
-             <iconset>
-              <normaloff>../../IMG8RES FOR QT/stat.png</normaloff>../../IMG8RES FOR QT/stat.png</iconset>
+             <iconset resource="image/image2.qrc">
+              <normaloff>:/new/prefix1/stat.png</normaloff>:/new/prefix1/stat.png</iconset>
             </property>
            </widget>
           </item>
@@ -1246,6 +1261,8 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
- <resources/>
+ <resources>
+  <include location="image/image2.qrc"/>
+ </resources>
  <connections/>
 </ui>

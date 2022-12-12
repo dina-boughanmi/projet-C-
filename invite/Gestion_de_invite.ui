@@ -495,7 +495,7 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
      <string notr="true"/>
     </property>
     <property name="currentIndex">
-     <number>1</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="tab">
      <attribute name="title">
@@ -6300,19 +6300,6 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
        <string>RFID</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="quittergestioninviter">
-      <property name="geometry">
-       <rect>
-        <x>500</x>
-        <y>70</y>
-        <width>93</width>
-        <height>28</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>quitter</string>
-      </property>
-     </widget>
     </widget>
     <widget class="QWidget" name="tab_2">
      <attribute name="title">
@@ -6391,6 +6378,10 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
       <property name="text">
        <string>PDF</string>
       </property>
+      <property name="icon">
+       <iconset resource="../image/image2.qrc">
+        <normaloff>:/new/prefix1/print.png</normaloff>:/new/prefix1/print.png</iconset>
+      </property>
      </widget>
      <widget class="QPushButton" name="pushButton_17">
       <property name="geometry">
@@ -6452,6 +6443,10 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
       <property name="text">
        <string>Statistiques</string>
       </property>
+      <property name="icon">
+       <iconset resource="../image/image2.qrc">
+        <normaloff>:/new/prefix1/stat.png</normaloff>:/new/prefix1/stat.png</iconset>
+      </property>
      </widget>
      <widget class="QPushButton" name="pushButton_19">
       <property name="geometry">
@@ -6467,6 +6462,10 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
       </property>
       <property name="text">
        <string>Export Excel</string>
+      </property>
+      <property name="icon">
+       <iconset resource="../image/image2.qrc">
+        <normaloff>:/new/prefix1/print.png</normaloff>:/new/prefix1/print.png</iconset>
       </property>
      </widget>
      <widget class="QPushButton" name="pushButton_20">
@@ -6748,6 +6747,19 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
      <string/>
     </property>
    </widget>
+   <widget class="QPushButton" name="quittergestioninviter">
+    <property name="geometry">
+     <rect>
+      <x>810</x>
+      <y>20</y>
+      <width>93</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>quitter</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
@@ -6761,6 +6773,8 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
- <resources/>
+ <resources>
+  <include location="../image/image2.qrc"/>
+ </resources>
  <connections/>
 </ui>

@@ -119,7 +119,6 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 RC_ICONS = on-air.ico
 RESOURCES += \
-    IMG8RES FOR QT/image.qrc \
     image/image2.qrc \
     invite/resource.qrc
 
